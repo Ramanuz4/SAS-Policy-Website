@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SAS Policy Value Hub Services</title>
+    <meta name="description" content="Get in touch with SAS Policy Value Hub Services. Expert insurance guidance and support available. Contact us for personalized insurance solutions.">
+    <link rel="stylesheet" href="contact-us-css.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav class="container">
+            <div class="logo" onclick="window.location.href='index.html'">
+                <img src="/Assets/SAS Logo.png" alt="SAS Logo" class="logo-image">
+                <span class="logo-text">SAS Policy Value Hub Services</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Contact Us</h1>
+                <p class="hero-subtitle">
+                    Ready to secure your future with the right insurance coverage? 
+                    Our expert team is here to help you every step of the way.
+                </p>
+                <div class="hero-breadcrumb">
+                    <a href="index.html">Home</a> / <span>Contact</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Choose the most convenient way to reach us. We're here to help!</p>
+            </div>
+            
+            <div class="contact-cards-grid">
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">📍</div>
+                    <h3>Our Office</h3>
+                    <p>123 Business Center<br>Insurance District<br>New Delhi, India 110001</p>
+                    <a href="https://maps.google.com" target="_blank" class="contact-link">Get Directions</a>
+                </div>
+                
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">📞</div>
+                    <h3>Phone Numbers</h3>
+                    <p>Primary: <a href="tel:+919876543210">+91 98765 43210</a><br>
+                       Secondary: <a href="tel:+918765432109">+91 87654 32109</a></p>
+                    <div class="contact-link">Available 24/7</div>
+                </div>
+                
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Email Addresses</h3>
+                    <p>General: <a href="mailto:info@saspolicyvaluehub.com">info@saspolicyvaluehub.com</a><br>
+                       Support: <a href="mailto:support@saspolicyvaluehub.com">support@saspolicyvaluehub.com</a></p>
+                    <div class="contact-link">Quick Response Guaranteed</div>
+                </div>
+                
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">🕒</div>
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 7:00 PM<br>
+                       Saturday: 10:00 AM - 5:00 PM<br>
+                       Sunday: Closed</p>
+                    <div class="contact-link">Emergency Support Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-form-wrapper">
+                <div class="form-header">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and our team will get back to you within 24 hours</p>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div id="messageContainer"></div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="quote">Request Quote</option>
+                            <option value="policy">Policy Information</option>
+                            <option value="claim">Claim Support</option>
+                            <option value="complaint">Complaint/Feedback</option>
+                            <option value="partnership">Partnership Inquiry</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="insuranceType">Insurance Type (Optional)</label>
+                        <select id="insuranceType" name="insuranceType">
+                            <option value="">Select insurance type</option>
+                            <option value="health">Health Insurance</option>
+                            <option value="life">Life Insurance</option>
+                            <option value="motor">Motor Insurance</option>
+                            <option value="travel">Travel Insurance</option>
+                            <option value="home">Home Insurance</option>
+                            <option value="multiple">Multiple Policies</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Please describe your inquiry in detail..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <span class="checkmark"></span>
+                            Subscribe to our newsletter for insurance tips and updates
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Send Message</span>
+                        <span class="loading" style="display: none;"></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Quote Section -->
+    <section class="quick-quote-section">
+        <div class="container">
+            <div class="quick-quote-content">
+                <div class="quote-text">
+                    <h2>Need a Quick Quote?</h2>
+                    <p>Get personalized insurance quotes in minutes. Our expert team will analyze your needs and provide the best coverage options at competitive rates.</p>
+                    <ul class="quote-features">
+                        <li>✅ Free consultation</li>
+                        <li>✅ Multiple insurance options</li>
+                        <li>✅ Competitive pricing</li>
+                        <li>✅ Expert guidance</li>
+                    </ul>
+                </div>
+                <div class="quote-actions">
+                    <button class="cta-button primary" onclick="openQuoteModal()">Get Free Quote</button>
+                    <button class="cta-button secondary" onclick="window.location.href='tel:+919876543210'">Call Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find quick answers to common questions about our services</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How quickly will you respond to my inquiry?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We strive to respond to all inquiries within 24 hours during business days. For urgent matters, please call our direct line at +91 98765 43210.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you provide insurance quotes over the phone?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, our experienced agents can provide preliminary quotes over the phone. However, for accurate pricing, we recommend scheduling a consultation to review your specific needs.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What documents do I need for an insurance quote?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Document requirements vary by insurance type. Generally, you'll need ID proof, age proof, income proof, and any existing policy documents. Our team will guide you through the specific requirements.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I visit your office for in-person consultation?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We encourage in-person consultations for complex insurance needs. Please call ahead to schedule an appointment to ensure our experts are available.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2>Find Us Here</h2>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <div class="map-content">
+                        <h3>📍 Our Location</h3>
+                        <p>123 Business Center, Insurance District<br>New Delhi, India 110001</p>
+                        <a href="https://maps.google.com" target="_blank" class="map-link">Open in Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SAS Policy Value Hub</h3>
+                    <p>Your trusted partner in insurance solutions. We provide comprehensive coverage and expert guidance to protect what matters most to you.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" title="Facebook">📘</a>
+                        <a href="#" class="social-link" title="Twitter">🐦</a>
+                        <a href="#" class="social-link" title="LinkedIn">💼</a>
+                        <a href="#" class="social-link" title="Instagram">📷</a>
+                        <a href="#" class="social-link" title="WhatsApp">📱</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <a href="services.html">Health Insurance</a>
+                    <a href="services.html">Life Insurance</a>
+                    <a href="services.html">Motor Insurance</a>
+                    <a href="services.html">Travel Insurance</a>
+                    <a href="services.html">Home Insurance</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Our Services</a>
+                    <a href="partners.html">Our Partners</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>📍 123 Business Center<br>Insurance District<br>New Delhi, India 110001</p>
+                    <p>📞 +91 98765 43210</p>
+                    <p>✉️ info@saspolicyvaluehub.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SAS Policy Value Hub Services Pvt Ltd. All rights reserved. | Designed with ❤️ for your security</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quote Modal -->
+    <div id="quoteModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('quoteModal')">&times;</span>
+            <h2>Quick Quote Request</h2>
+            <p>Fill out this quick form and we'll get back to you with a personalized quote.</p>
+            
+            <form id="quickQuoteForm">
+                <div class="form-group">
+                    <label for="quoteName">Full Name *</label>
+                    <input type="text" id="quoteName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="quoteEmail">Email *</label>
+                    <input type="email" id="quoteEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="quotePhone">Phone *</label>
+                    <input type="tel" id="quotePhone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="quoteInsuranceType">Insurance Type *</label>
+                    <select id="quoteInsuranceType" name="insuranceType" required>
+                        <option value="">Select insurance type</option>
+                        <option value="health">Health Insurance</option>
+                        <option value="life">Life Insurance</option>
+                        <option value="motor">Motor Insurance</option>
+                        <option value="travel">Travel Insurance</option>
+                        <option value="home">Home Insurance</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">Request Quote</span>
+                    <span class="loading" style="display: none;"></span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="contact-us-js.js"></script>
+</body>
+</html>
