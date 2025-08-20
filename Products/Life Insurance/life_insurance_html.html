@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Insurance Services | SAS Policy Value Hub Services</title>
+    <meta name="description" content="Comprehensive life insurance solutions to secure your family's financial future. Term life, whole life, ULIPs, and endowment plans with expert guidance.">
+    <link rel="stylesheet" href="life_insurance_css.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav class="container">
+            <div class="logo" onclick="window.location.href='../index.html'">
+                <img src="../Assets/SAS Logo.png" alt="SAS Logo" class="logo-image">
+                <span class="logo-text">SAS Policy Value Hub Services</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#life-types">Life Plans</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#calculator">Calculator</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">💼 Life Insurance Experts</div>
+                <h1>Secure Your Family's Financial Future with Life Insurance</h1>
+                <p class="hero-subtitle">
+                    Life insurance provides financial protection for your loved ones when they need it most. 
+                    Our comprehensive life insurance solutions ensure your family's dreams and aspirations remain protected.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">₹10 Cr</div>
+                        <div class="stat-label">Maximum Coverage</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24 Hrs</div>
+                        <div class="stat-label">Policy Approval</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">99%</div>
+                        <div class="stat-label">Claim Settlement</div>
+                    </div>
+                </div>
+                <div class="cta-buttons">
+                    <button class="cta-button primary" onclick="scrollToSection('calculator')">
+                        Calculate Premium
+                    </button>
+                    <button class="cta-button secondary" onclick="scrollToSection('contact')">
+                        Get Expert Advice
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="insurance-card">
+                    <div class="card-header">
+                        <h3>Life Insurance Policy</h3>
+                        <span class="policy-status">Active</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="coverage-amount">₹50,00,000</div>
+                        <div class="coverage-label">Sum Assured</div>
+                        <div class="premium-info">
+                            <span>Monthly Premium: ₹2,500</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Life Insurance Explanation -->
+    <section class="life-explanation">
+        <div class="container">
+            <div class="explanation-content">
+                <div class="explanation-text">
+                    <h2>What is Life Insurance?</h2>
+                    <p>
+                        Life insurance is a contract between you and an insurance company where you pay regular premiums, 
+                        and in return, the insurer provides a lump sum payment (death benefit) to your beneficiaries 
+                        when you pass away. It's a crucial financial tool that ensures your family's financial security 
+                        and helps maintain their standard of living even in your absence.
+                    </p>
+                    <div class="key-points">
+                        <div class="point-item">
+                            <div class="point-icon">🛡️</div>
+                            <div class="point-content">
+                                <h4>Financial Protection</h4>
+                                <p>Provides a safety net for your family's immediate and future financial needs</p>
+                            </div>
+                        </div>
+                        <div class="point-item">
+                            <div class="point-icon">💰</div>
+                            <div class="point-content">
+                                <h4>Income Replacement</h4>
+                                <p>Replaces lost income to help maintain your family's lifestyle</p>
+                            </div>
+                        </div>
+                        <div class="point-item">
+                            <div class="point-icon">🏠</div>
+                            <div class="point-content">
+                                <h4>Debt Coverage</h4>
+                                <p>Helps pay off mortgages, loans, and other outstanding debts</p>
+                            </div>
+                        </div>
+                        <div class="point-item">
+                            <div class="point-icon">🎓</div>
+                            <div class="point-content">
+                                <h4>Future Goals</h4>
+                                <p>Ensures children's education and other important life goals are funded</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="explanation-visual">
+                    <div class="life-cycle">
+                        <div class="cycle-item">
+                            <div class="cycle-icon">👤</div>
+                            <div class="cycle-text">You pay premiums</div>
+                        </div>
+                        <div class="cycle-arrow">→</div>
+                        <div class="cycle-item">
+                            <div class="cycle-icon">📋</div>
+                            <div class="cycle-text">Insurance coverage active</div>
+                        </div>
+                        <div class="cycle-arrow">→</div>
+                        <div class="cycle-item">
+                            <div class="cycle-icon">👨‍👩‍👧‍👦</div>
+                            <div class="cycle-text">Family receives benefit</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Types of Life Insurance -->
+    <section class="life-types" id="life-types">
+        <div class="container">
+            <h2 class="section-title">Types of Life Insurance Plans</h2>
+            <p class="section-subtitle">Choose the right life insurance plan that fits your needs and financial goals</p>
+            
+            <div class="types-grid">
+                <div class="type-card featured">
+                    <div class="type-header">
+                        <div class="type-icon">⚡</div>
+                        <h3>Term Life Insurance</h3>
+                        <span class="popular-badge">Most Popular</span>
+                    </div>
+                    <div class="type-content">
+                        <p>Pure life insurance coverage for a specific term with high coverage at low premiums.</p>
+                        <div class="features-list">
+                            <div class="feature-item">✓ High coverage at low cost</div>
+                            <div class="feature-item">✓ Flexible policy terms (5-40 years)</div>
+                            <div class="feature-item">✓ Renewable and convertible options</div>
+                            <div class="feature-item">✓ Tax benefits under Section 80C</div>
+                        </div>
+                        <div class="price-info">
+                            <span class="price">Starting from ₹500/month</span>
+                            <span class="coverage">for ₹1 Crore coverage</span>
+                        </div>
+                        <button class="plan-btn" onclick="openPlanModal('term')">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="type-card">
+                    <div class="type-header">
+                        <div class="type-icon">🏦</div>
+                        <h3>Whole Life Insurance</h3>
+                    </div>
+                    <div class="type-content">
+                        <p>Lifelong coverage with guaranteed cash value accumulation and investment component.</p>
+                        <div class="features-list">
+                            <div class="feature-item">✓ Lifelong coverage guarantee</div>
+                            <div class="feature-item">✓ Cash value accumulation</div>
+                            <div class="feature-item">✓ Fixed premiums</div>
+                            <div class="feature-item">✓ Loan facility available</div>
+                        </div>
+                        <div class="price-info">
+                            <span class="price">Starting from ₹2,000/month</span>
+                            <span class="coverage">for ₹25 Lakh coverage</span>
+                        </div>
+                        <button class="plan-btn" onclick="openPlanModal('whole')">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="type-card">
+                    <div class="type-header">
+                        <div class="type-icon">📈</div>
+                        <h3>ULIPs</h3>
+                    </div>
+                    <div class="type-content">
+                        <p>Unit Linked Insurance Plans combining insurance coverage with investment opportunities.</p>
+                        <div class="features-list">
+                            <div class="feature-item">✓ Insurance + Investment</div>
+                            <div class="feature-item">✓ Multiple fund options</div>
+                            <div class="feature-item">✓ Flexible premium payment</div>
+                            <div class="feature-item">✓ Tax benefits</div>
+                        </div>
+                        <div class="price-info">
+                            <span class="price">Starting from ₹1,500/month</span>
+                            <span class="coverage">for dual benefits</span>
+                        </div>
+                        <button class="plan-btn" onclick="openPlanModal('ulip')">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="type-card">
+                    <div class="type-header">
+                        <div class="type-icon">💎</div>
+                        <h3>Endowment Plans</h3>
+                    </div>
+                    <div class="type-content">
+                        <p>Savings-cum-insurance plans with guaranteed returns and maturity benefits.</p>
+                        <div class="features-list">
+                            <div class="feature-item">✓ Guaranteed returns</div>
+                            <div class="feature-item">✓ Maturity benefits</div>
+                            <div class="feature-item">✓ Bonus additions</div>
+                            <div class="feature-item">✓ Disciplined savings</div>
+                        </div>
+                        <div class="price-info">
+                            <span class="price">Starting from ₹3,000/month</span>
+                            <span class="coverage">for guaranteed returns</span>
+                        </div>
+                        <button class="plan-btn" onclick="openPlanModal('endowment')">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="type-card">
+                    <div class="type-header">
+                        <div class="type-icon">🎓</div>
+                        <h3>Child Plans</h3>
+                    </div>
+                    <div class="type-content">
+                        <p>Specialized plans to secure your child's education and future milestones.</p>
+                        <div class="features-list">
+                            <div class="feature-item">✓ Education funding</div>
+                            <div class="feature-item">✓ Waiver of premium benefit</div>
+                            <div class="feature-item">✓ Milestone benefits</div>
+                            <div class="feature-item">✓ Flexible withdrawal</div>
+                        </div>
+                        <div class="price-info">
+                            <span class="price">Starting from ₹2,500/month</span>
+                            <span class="coverage">for child's future</span>
+                        </div>
+                        <button class="plan-btn" onclick="openPlanModal('child')">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="type-card">
+                    <div class="type-header">
+                        <div class="type-icon">🏖️</div>
+                        <h3>Pension Plans</h3>
+                    </div>
+                    <div class="type-content">
+                        <p>Retirement-focused plans ensuring regular income during your golden years.</p>
+                        <div class="features-list">
+                            <div class="feature-item">✓ Regular pension income</div>
+                            <div class="feature-item">✓ Vesting benefits</div>
+                            <div class="feature-item">✓ Annuity options</div>
+                            <div class="feature-item">✓ Tax efficient</div>
+                        </div>
+                        <div class="price-info">
+                            <span class="price">Starting from ₹5,000/month</span>
+                            <span class="coverage">for retirement planning</span>
+                        </div>
+                        <button class="plan-btn" onclick="openPlanModal('pension')">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Life Insurance Services?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Expert Consultation</h3>
+                    <p>Get personalized advice from certified insurance experts to choose the perfect plan for your needs.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Competitive Premiums</h3>
+                    <p>Access the best rates in the market with our partnerships with leading insurance providers.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📱</div>
+                    <h3>Digital Process</h3>
+                    <p>Seamless online application, documentation, and policy management through our digital platform.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Quick Approval</h3>
+                    <p>Fast-track policy approval process with minimal documentation and quick turnaround time.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>Claim Support</h3>
+                    <p>Dedicated claim assistance to ensure smooth and hassle-free claim settlement for your family.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📞</div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock customer support for all your policy-related queries and assistance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Calculator -->
+    <section class="calculator" id="calculator">
+        <div class="container">
+            <h2 class="section-title">Life Insurance Premium Calculator</h2>
+            <p class="section-subtitle">Calculate your life insurance premium instantly with our smart calculator</p>
+            
+            <div class="calculator-container">
+                <div class="calculator-form">
+                    <form id="premiumCalculator">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="age">Your Age</label>
+                                <input type="number" id="age" min="18" max="65" placeholder="25" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <select id="gender" required>
+                                    <option value="">Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="coverage">Coverage Amount (₹)</label>
+                                <select id="coverage" required>
+                                    <option value="">Select Coverage</option>
+                                    <option value="1000000">₹10 Lakh</option>
+                                    <option value="2500000">₹25 Lakh</option>
+                                    <option value="5000000">₹50 Lakh</option>
+                                    <option value="10000000">₹1 Crore</option>
+                                    <option value="50000000">₹5 Crore</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="planType">Plan Type</label>
+                                <select id="planType" required>
+                                    <option value="">Select Plan</option>
+                                    <option value="term">Term Life</option>
+                                    <option value="whole">Whole Life</option>
+                                    <option value="ulip">ULIP</option>
+                                    <option value="endowment">Endowment</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="term">Policy Term (Years)</label>
+                                <select id="term" required>
+                                    <option value="">Select Term</option>
+                                    <option value="10">10 Years</option>
+                                    <option value="15">15 Years</option>
+                                    <option value="20">20 Years</option>
+                                    <option value="25">25 Years</option>
+                                    <option value="30">30 Years</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="smoking">Smoking Status</label>
+                                <select id="smoking" required>
+                                    <option value="">Select Status</option>
+                                    <option value="no">Non-Smoker</option>
+                                    <option value="yes">Smoker</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="calculate-btn">Calculate Premium</button>
+                    </form>
+                </div>
+
+                <div class="calculator-result" id="calculatorResult">
+                    <div class="result-placeholder">
+                        <div class="placeholder-icon">📊</div>
+                        <h3>Your Premium Calculation</h3>
+                        <p>Fill the form to get instant premium calculation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendations -->
+    <section class="recommendations">
+        <div class="container">
+            <h2 class="section-title">Our Expert Recommendations</h2>
+            <p class="section-subtitle">Based on different life stages and financial goals</p>
+            
+            <div class="recommendation-tabs">
+                <button class="tab-btn active" onclick="showRecommendation('young')">Young Professionals</button>
+                <button class="tab-btn" onclick="showRecommendation('family')">Growing Families</button>
+                <button class="tab-btn" onclick="showRecommendation('established')">Established Earners</button>
+                <button class="tab-btn" onclick="showRecommendation('retirement')">Pre-Retirement</button>
+            </div>
+
+            <div class="recommendation-content">
+                <div class="recommendation-tab active" id="young">
+                    <div class="recommendation-card">
+                        <h3>Young Professionals (25-35 years)</h3>
+                        <div class="recommendation-details">
+                            <div class="recommended-plan">
+                                <h4>🎯 Recommended: Term Life Insurance</h4>
+                                <p>High coverage at low premiums to build financial foundation</p>
+                                <div class="plan-features">
+                                    <span class="feature">Coverage: ₹50 Lakh - ₹1 Crore</span>
+                                    <span class="feature">Premium: ₹500-₹800/month</span>
+                                    <span class="feature">Term: 25-30 years</span>
+                                </div>
+                            </div>
+                            <div class="why-section">
+                                <h4>Why This Plan?</h4>
+                                <ul>
+                                    <li>Maximum coverage at minimum cost</li>
+                                    <li>Long policy term ensures low premiums</li>
+                                    <li>Flexible to upgrade as income grows</li>
+                                    <li>Tax benefits help in financial planning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recommendation-tab" id="family">
+                    <div class="recommendation-card">
+                        <h3>Growing Families (30-45 years)</h3>
+                        <div class="recommendation-details">
+                            <div class="recommended-plan">
+                                <h4>🎯 Recommended: Term Life + Child Plan</h4>
+                                <p>Comprehensive protection for family and children's future</p>
+                                <div class="plan-features">
+                                    <span class="feature">Coverage: ₹1-2 Crore</span>
+                                    <span class="feature">Premium: ₹1,500-₹3,000/month</span>
+                                    <span class="feature">Child Plan: ₹2,500/month</span>
+                                </div>
+                            </div>
+                            <div class="why-section">
+                                <h4>Why This Combination?</h4>
+                                <ul>
+                                    <li>Adequate coverage for family responsibilities</li>
+                                    <li>Child plan ensures education funding</li>
+                                    <li>Waiver of premium in case of unfortunate events</li>
+                                    <li>Dual tax benefits from both plans</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recommendation-tab" id="established">
+                    <div class="recommendation-card">
+                        <h3>Established Earners (40-55 years)</h3>
+                        <div class="recommendation-details">
+                            <div class="recommended-plan">
+                                <h4>🎯 Recommended: Whole Life + ULIP</h4>
+                                <p>Permanent protection with wealth creation</p>
+                                <div class="plan-features">
+                                    <span class="feature">Coverage: ₹2-5 Crore</span>
+                                    <span class="feature">Premium: ₹5,000-₹10,000/month</span>
+                                    <span class="feature">ULIP: ₹3,000/month</span>
+                                </div>
+                            </div>
+                            <div class="why-section">
+                                <h4>Why This Strategy?</h4>
+                                <ul>
+                                    <li>Lifetime coverage with cash value</li>
+                                    <li>ULIP provides investment growth</li>
+                                    <li>Legacy planning for next generation</li>
+                                    <li>Loan facility against policy value</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recommendation-tab" id="retirement">
+                    <div class="recommendation-card">
+                        <h3>Pre-Retirement (50-60 years)</h3>
+                        <div class="recommendation-details">
+                            <div class="recommended-plan">
+                                <h4>🎯 Recommended: Pension Plan + Endowment</h4>
+                                <p>Retirement income security with guaranteed returns</p>
+                                <div class="plan-features">
+                                    <span class="feature">Pension: ₹5,000-₹15,000/month</span>
+                                    <span class="feature">Endowment: ₹8,000/month</span>
+                                    <span class="feature">Guaranteed Income: ₹25,000/month</span>
+                                </div>
+                            </div>
+                            <div class="why-section">
+                                <h4>Why This Approach?</h4>
+                                <ul>
+                                    <li>Regular pension income after retirement</li>
+                                    <li>Guaranteed returns from endowment plan</li>
+                                    <li>Tax-efficient retirement planning</li>
+                                    <li>Financial independence in golden years</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Ready to Secure Your Family's Future?</h2>
+            <p class="section-subtitle">Connect with our life insurance experts for personalized guidance</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">📞</div>
+                        <h3>Call Our Experts</h3>
+                        <p>+91 98765 43210</p>
+                        <p>+91 87654 32109</p>
+                        <span class="availability">Available 9 AM - 8 PM</span>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">✉️</div>
+                        <h3>Email Support</h3>
+                        <p>life@saspolicyvaluehub.com</p>
+                        <p>support@saspolicyvaluehub.com</p>
+                        <span class="availability">Response within 2 hours</span>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">📍</div>
+                        <h3>Visit Our Office</h3>
+                        <p>123 Business Center<br>Insurance District<br>New Delhi, India 110001</p>
+                        <span class="availability">Mon-Sat: 10 AM - 6 PM</span>
+                    </div>
+                </div>
+
+                <form class="consultation-form" id="consultationForm">
+                    <h3>Book Free Consultation</h3>
+                    <div id="consultationMessage"></div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="consultName">Full Name *</label>
+                            <input type="text" id="consultName" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="consultPhone">Phone Number *</label>
+                            <input type="tel" id="consultPhone" name="phone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="consultEmail">Email Address *</label>
+                            <input type="email" id="consultEmail" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="consultAge">Age</label>
+                            <input type="number" id="consultAge" name="age" min="18" max="70">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="planInterest">Plan Interest</label>
+                        <select id="planInterest" name="planInterest">
+                            <option value="">Select Plan Type</option>
+                            <option value="term">Term Life Insurance</option>
+                            <option value="whole">Whole Life Insurance</option>
+                            <option value="ulip">ULIPs</option>
+                            <option value="endowment">Endowment Plans</option>
+                            <option value="child">Child Plans</option>
+                            <option value="pension">Pension Plans</option>
+                            <option value="consultation">General Consultation</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="consultMessage">Message</label>
+                        <textarea id="consultMessage" name="message" rows="4" placeholder="Tell us about your requirements..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Book Free Consultation</span>
+                        <span class="loading" style="display: none;"></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SAS Policy Value Hub</h3>
+                    <p>Your trusted partner in life insurance solutions. We provide comprehensive coverage and expert guidance to protect what matters most to you.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">💼</a>
+                        <a href="#" class="social-link">📷</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Life Insurance Plans</h3>
+                    <a href="#life-types">Term Life Insurance</a>
+                    <a href="#life-types">Whole Life Insurance</a>
+                    <a href="#life-types">ULIPs</a>
+                    <a href="#life-types">Endowment Plans</a>
+                    <a href="#life-types">Child Plans</a>
+                    <a href="#life-types">Pension Plans</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="../index.html">Home</a>
+                    <a href="#calculator">Premium Calculator</a>
+                    <a href="#benefits">Benefits</a>
+                    <a href="#contact">Contact Us</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>📍 123 Business Center<br>Insurance District<br>New Delhi, India 110001</p>
+                    <p>📞 +91 98765 43210</p>
+                    <p>✉️ life@saspolicyvaluehub.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SAS Policy Value Hub Services Pvt Ltd. All rights reserved. | Designed with ❤️ for your security</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Plan Details Modal -->
+    <div id="planModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('planModal')">&times;</span>
+            <div id="planModalContent">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="life_insurance_js.js"></script>
+</body>
+</html>

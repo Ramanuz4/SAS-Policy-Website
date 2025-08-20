@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor Insurance Services | SAS Policy Value Hub</title>
+    <meta name="description" content="Comprehensive motor insurance coverage for cars, bikes, and commercial vehicles. Get instant quotes, cashless claims, and complete protection with SAS Policy Value Hub Services.">
+    <link rel="stylesheet" href="motor_insurance_css.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav class="container">
+            <div class="logo" onclick="goToHome()">
+                <img src="/Assets/SAS Logo.png" alt="SAS Logo" class="logo-image">
+                <span class="logo-text">SAS Policy Value Hub Services</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/" onclick="goToHome()">Home</a></li>
+                <li><a href="#motor-types" onclick="scrollToSection('motor-types')">Insurance Types</a></li>
+                <li><a href="#features" onclick="scrollToSection('features')">Features</a></li>
+                <li><a href="#benefits" onclick="scrollToSection('benefits')">Benefits</a></li>
+                <li><a href="#quote" onclick="scrollToSection('quote')">Get Quote</a></li>
+                <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-icon">🚗</div>
+                <h1>Complete Motor Insurance Protection</h1>
+                <p class="subtitle">
+                    Comprehensive coverage for your vehicle with instant policy issuance, 
+                    cashless claims, and 24/7 roadside assistance. Drive with confidence!
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">5000+</div>
+                        <div class="stat-label">Cashless Garages</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Customer Support</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">99%</div>
+                        <div class="stat-label">Claim Settlement</div>
+                    </div>
+                </div>
+                <div class="cta-buttons">
+                    <button class="cta-button primary" onclick="openQuoteModal()">
+                        Get Instant Quote
+                    </button>
+                    <button class="cta-button secondary" onclick="scrollToSection('motor-types')">
+                        Explore Plans
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motor Insurance Types Section -->
+    <section class="motor-types" id="motor-types">
+        <div class="container">
+            <h2 class="section-title fade-in">Motor Insurance Types</h2>
+            <p class="section-subtitle fade-in">
+                Choose the right coverage for your vehicle with our comprehensive insurance options
+            </p>
+            
+            <div class="insurance-categories">
+                <!-- Comprehensive Insurance -->
+                <div class="category-card fade-in">
+                    <div class="category-header">
+                        <div class="category-icon">🛡️</div>
+                        <h3>Comprehensive Motor Insurance</h3>
+                        <p class="category-desc">Complete protection for your vehicle against all risks</p>
+                    </div>
+                    <div class="category-content">
+                        <div class="coverage-list">
+                            <h4>What's Covered:</h4>
+                            <ul>
+                                <li>Own damage due to accidents, theft, fire</li>
+                                <li>Third-party liability (mandatory)</li>
+                                <li>Natural disasters (flood, earthquake, cyclone)</li>
+                                <li>Man-made disasters (riots, strikes, terrorism)</li>
+                                <li>Personal accident cover for owner-driver</li>
+                                <li>Vandalism and malicious damage</li>
+                            </ul>
+                        </div>
+                        <div class="add-ons">
+                            <h4>Popular Add-ons:</h4>
+                            <div class="addon-grid">
+                                <div class="addon-item">
+                                    <span class="addon-icon">🔧</span>
+                                    <span>Zero Depreciation</span>
+                                </div>
+                                <div class="addon-item">
+                                    <span class="addon-icon">🚗</span>
+                                    <span>Engine Protection</span>
+                                </div>
+                                <div class="addon-item">
+                                    <span class="addon-icon">🆘</span>
+                                    <span>Roadside Assistance</span>
+                                </div>
+                                <div class="addon-item">
+                                    <span class="addon-icon">🏥</span>
+                                    <span>Consumable Cover</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="plan-btn" onclick="openPlanModal('comprehensive')">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- Third Party Insurance -->
+                <div class="category-card fade-in">
+                    <div class="category-header">
+                        <div class="category-icon">⚖️</div>
+                        <h3>Third-Party Liability Insurance</h3>
+                        <p class="category-desc">Mandatory coverage as per Motor Vehicle Act</p>
+                    </div>
+                    <div class="category-content">
+                        <div class="coverage-list">
+                            <h4>What's Covered:</h4>
+                            <ul>
+                                <li>Third-party bodily injury/death (unlimited)</li>
+                                <li>Third-party property damage (up to ₹7.5 lakhs)</li>
+                                <li>Legal liability coverage</li>
+                                <li>Court case legal expenses</li>
+                            </ul>
+                        </div>
+                        <div class="important-note">
+                            <h4>Important Note:</h4>
+                            <p>✓ Legally mandatory for all vehicles</p>
+                            <p>✓ Most affordable option</p>
+                            <p>✗ No coverage for own vehicle damage</p>
+                            <p>✗ No personal accident cover</p>
+                        </div>
+                        <button class="plan-btn" onclick="openPlanModal('third-party')">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- Commercial Vehicle Insurance -->
+                <div class="category-card fade-in">
+                    <div class="category-header">
+                        <div class="category-icon">🚛</div>
+                        <h3>Commercial Vehicle Insurance</h3>
+                        <p class="category-desc">Specialized coverage for business vehicles</p>
+                    </div>
+                    <div class="category-content">
+                        <div class="coverage-list">
+                            <h4>Vehicle Types Covered:</h4>
+                            <ul>
+                                <li>Goods carrying vehicles (trucks, tempo)</li>
+                                <li>Passenger carrying vehicles (buses, taxis)</li>
+                                <li>Special purpose vehicles</li>
+                                <li>Construction equipment</li>
+                                <li>Agricultural vehicles</li>
+                            </ul>
+                        </div>
+                        <div class="commercial-features">
+                            <h4>Special Features:</h4>
+                            <p>• Goods in transit coverage</p>
+                            <p>• Driver and conductor coverage</p>
+                            <p>• Loss of income protection</p>
+                            <p>• Flexible payment terms</p>
+                        </div>
+                        <button class="plan-btn" onclick="openPlanModal('commercial')">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- Two-Wheeler Insurance -->
+                <div class="category-card fade-in">
+                    <div class="category-header">
+                        <div class="category-icon">🏍️</div>
+                        <h3>Two-Wheeler Insurance</h3>
+                        <p class="category-desc">Comprehensive protection for bikes and scooters</p>
+                    </div>
+                    <div class="category-content">
+                        <div class="coverage-list">
+                            <h4>Coverage Options:</h4>
+                            <ul>
+                                <li>Own damage coverage</li>
+                                <li>Third-party liability</li>
+                                <li>Theft protection</li>
+                                <li>Personal accident cover</li>
+                                <li>Pillion rider coverage</li>
+                            </ul>
+                        </div>
+                        <div class="two-wheeler-benefits">
+                            <h4>Special Benefits:</h4>
+                            <p>• Quick claim settlement</p>
+                            <p>• Affordable premiums</p>
+                            <p>• Instant policy issuance</p>
+                            <p>• Nationwide coverage</p>
+                        </div>
+                        <button class="plan-btn" onclick="openPlanModal('two-wheeler')">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title fade-in">Why Choose Our Motor Insurance?</h2>
+            <p class="section-subtitle fade-in">
+                Experience hassle-free motor insurance with industry-leading features and benefits
+            </p>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Instant Policy Issuance</h3>
+                    <p>Get your motor insurance policy issued instantly online. No paperwork, no delays - just complete protection in minutes.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🏥</div>
+                    <h3>Cashless Claim Settlement</h3>
+                    <p>Access our network of 5000+ authorized garages for cashless repairs. No upfront payments, just hassle-free claims.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📱</div>
+                    <h3>24/7 Digital Support</h3>
+                    <p>Report claims, track status, and get support anytime through our mobile app and online portal.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🛠️</div>
+                    <h3>Roadside Assistance</h3>
+                    <p>24x7 roadside assistance including towing, battery jump-start, flat tire change, and emergency fuel delivery.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">💰</div>
+                    <h3>No Claim Bonus</h3>
+                    <p>Earn up to 50% discount on premium renewal for claim-free years. More savings for careful drivers.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Comprehensive Coverage</h3>
+                    <p>Complete protection against accidents, theft, natural disasters, and third-party liabilities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <h2 class="section-title fade-in">Motor Insurance Benefits</h2>
+            <div class="benefits-content">
+                <div class="benefits-grid">
+                    <div class="benefit-card fade-in">
+                        <div class="benefit-header">
+                            <h3>Financial Protection</h3>
+                            <div class="benefit-icon">💳</div>
+                        </div>
+                        <ul>
+                            <li>Protection against repair costs</li>
+                            <li>Coverage for third-party damages</li>
+                            <li>Personal accident compensation</li>
+                            <li>Legal expense coverage</li>
+                        </ul>
+                    </div>
+                    <div class="benefit-card fade-in">
+                        <div class="benefit-header">
+                            <h3>Legal Compliance</h3>
+                            <div class="benefit-icon">📋</div>
+                        </div>
+                        <ul>
+                            <li>Meets Motor Vehicle Act requirements</li>
+                            <li>Avoid legal penalties and fines</li>
+                            <li>Valid registration and fitness</li>
+                            <li>Peace of mind while driving</li>
+                        </ul>
+                    </div>
+                    <div class="benefit-card fade-in">
+                        <div class="benefit-header">
+                            <h3>Additional Services</h3>
+                            <div class="benefit-icon">🎯</div>
+                        </div>
+                        <ul>
+                            <li>Free annual vehicle inspection</li>
+                            <li>Emergency medical assistance</li>
+                            <li>Hotel accommodation coverage</li>
+                            <li>Return to residence benefit</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section" id="quote">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Get Your Motor Insurance Quote</h2>
+            <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.9);">
+                Compare plans from top insurers and get the best deal for your vehicle
+            </p>
+            <form class="quote-form" id="motorQuoteForm">
+                <div id="quoteMessage"></div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="vehicleType">Vehicle Type *</label>
+                        <select id="vehicleType" name="vehicleType" required onchange="updateVehicleOptions()">
+                            <option value="">Select Vehicle Type</option>
+                            <option value="car">Car</option>
+                            <option value="bike">Two Wheeler</option>
+                            <option value="commercial">Commercial Vehicle</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="registrationNumber">Registration Number</label>
+                        <input type="text" id="registrationNumber" name="registrationNumber" 
+                               placeholder="e.g., DL01AB1234" style="text-transform: uppercase;">
+                    </div>
+                </div>
+                
+                <div class="form-row" id="vehicleDetailsRow" style="display: none;">
+                    <div class="form-group">
+                        <label for="make">Make *</label>
+                        <select id="make" name="make" required onchange="updateModels()">
+                            <option value="">Select Make</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="model">Model *</label>
+                        <select id="model" name="model" required>
+                            <option value="">Select Model</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="manufacturingYear">Manufacturing Year *</label>
+                        <select id="manufacturingYear" name="manufacturingYear" required>
+                            <option value="">Select Year</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="fuelType">Fuel Type *</label>
+                        <select id="fuelType" name="fuelType" required>
+                            <option value="">Select Fuel Type</option>
+                            <option value="petrol">Petrol</option>
+                            <option value="diesel">Diesel</option>
+                            <option value="cng">CNG</option>
+                            <option value="electric">Electric</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number *</label>
+                        <input type="tel" id="mobile" name="mobile" placeholder="Enter 10-digit mobile number" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City *</label>
+                        <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="policyType">Policy Type *</label>
+                    <select id="policyType" name="policyType" required>
+                        <option value="">Select Policy Type</option>
+                        <option value="comprehensive">Comprehensive</option>
+                        <option value="third-party">Third Party Only</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="additionalInfo">Additional Requirements</label>
+                    <textarea id="additionalInfo" name="additionalInfo" rows="3" 
+                              placeholder="Any specific requirements or questions..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">Get My Quote</span>
+                    <span class="loading" style="display: none;"></span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Get In Touch</h2>
+            <p class="section-subtitle fade-in">
+                Need help choosing the right motor insurance? Our experts are here to assist you!
+            </p>
+            <div class="contact-content">
+                <div class="contact-info fade-in">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">📍</div>
+                        <div class="contact-item-content">
+                            <h4>Our Office</h4>
+                            <p>123 Business Center<br>Insurance District<br>New Delhi, India 110001</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">📞</div>
+                        <div class="contact-item-content">
+                            <h4>Phone Numbers</h4>
+                            <p>Primary: +91 98765 43210<br>Secondary: +91 87654 32109</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">✉️</div>
+                        <div class="contact-item-content">
+                            <h4>Email Addresses</h4>
+                            <p>info@saspolicyvaluehub.com<br>motor@saspolicyvaluehub.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">🕒</div>
+                        <div class="contact-item-content">
+                            <h4>Business Hours</h4>
+                            <p>Monday - Friday: 9:00 AM - 7:00 PM<br>Saturday: 10:00 AM - 5:00 PM<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <h3>Send Us a Message</h3>
+                    <div id="contactMessage"></div>
+                    <div class="form-group">
+                        <label for="contactName">Full Name *</label>
+                        <input type="text" id="contactName" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Email Address *</label>
+                        <input type="email" id="contactEmail" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactPhone">Phone Number</label>
+                        <input type="tel" id="contactPhone" name="phone" placeholder="Enter your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactSubject">Subject *</label>
+                        <select id="contactSubject" name="subject" required>
+                            <option value="">Select Subject</option>
+                            <option value="quote">Motor Insurance Quote</option>
+                            <option value="claim">Claim Support</option>
+                            <option value="policy">Policy Information</option>
+                            <option value="general">General Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Message *</label>
+                        <textarea id="contactMessage" name="message" rows="5" 
+                                  placeholder="Please describe your inquiry..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Send Message</span>
+                        <span class="loading" style="display: none;"></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SAS Policy Value Hub</h3>
+                    <p>Your trusted partner in insurance solutions. We provide comprehensive coverage and expert guidance to protect what matters most to you.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" title="Facebook">📘</a>
+                        <a href="#" class="social-link" title="Twitter">🐦</a>
+                        <a href="#" class="social-link" title="LinkedIn">💼</a>
+                        <a href="#" class="social-link" title="Instagram">📷</a>
+                        <a href="#" class="social-link" title="WhatsApp">📱</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <a href="/services">Health Insurance</a>
+                    <a href="/services">Life Insurance</a>
+                    <a href="/motor-insurance">Motor Insurance</a>
+                    <a href="/services">Travel Insurance</a>
+                    <a href="/services">Home Insurance</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="/About Us/about_us_html.html">About Us</a>
+                    <a href="/Our Services/services_html.html">Our Services</a>
+                    <a href="/Our Partners/partners-html.html">Our Partners</a>
+                    <a href="#contact">Contact Us</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>📍 123 Business Center<br>Insurance District<br>New Delhi, India 110001</p>
+                    <p>📞 +91 98765 43210</p>
+                    <p>✉️ info@saspolicyvaluehub.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SAS Policy Value Hub Services Pvt Ltd. All rights reserved. | Designed with ❤️ for your security</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="quoteModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('quoteModal')">&times;</span>
+            <h2>Get Instant Motor Insurance Quote</h2>
+            <p>Fill out our quick quote form below to get personalized motor insurance quotes from top insurers.</p>
+            <div style="text-align: center; margin-top: 2rem;">
+                <button class="cta-button primary" onclick="closeModal('quoteModal'); scrollToSection('quote');">
+                    Go to Quote Form
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="planModal" class="modal">
+        <div class="modal-content plan-modal">
+            <span class="close" onclick="closeModal('planModal')">&times;</span>
+            <div id="planModalContent">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="motor_insurance_js.js"></script>
+</body>
+</html>
