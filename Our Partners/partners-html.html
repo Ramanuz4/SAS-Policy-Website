@@ -10,24 +10,34 @@
 <body>
     <!-- Header -->
     <header id="header">
-        <nav class="container">
-            <div class="logo" onclick="goHome()">
-                <img src="/Assets/SAS Logo.png" alt="SAS Logo" class="logo-image">
-                <span class="logo-text">SAS Policy Value Hub Services</span>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/Our Services/services_html.html">Services</a></li>
-                <li><a href="/About Us/about_us_html.html">About</a></li>
-                <li><a href="#partners" class="active">Partners</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+      <nav class="container">
+        <div class="logo" onclick="scrollToSection('home')">
+          <img src="/Assets/SAS Logo.png" alt="SAS Logo" class="logo-image" />
+          <span class="logo-text">SAS Policy Value Hub Services</span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" onclick="scrollToSection('home')">Home</a></li>
+          <li>
+            <a href="#services" onclick="scrollToSection('services')"
+              >Services</a
+            >
+          </li>
+          <li><a href="#about" onclick="scrollToSection('about')">About</a></li>
+          <li>
+            <a href="#associates" onclick="scrollToSection('associates')"
+              >Partners</a
+            >
+          </li>
+          <li>
+            <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
+          </li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
     </header>
 
     <!-- Hero Section -->

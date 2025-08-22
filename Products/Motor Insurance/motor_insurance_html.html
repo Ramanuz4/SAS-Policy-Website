@@ -10,25 +10,34 @@
 <body>
     <!-- Header -->
     <header id="header">
-        <nav class="container">
-            <div class="logo" onclick="goToHome()">
-                <img src="/Assets/SAS Logo.png" alt="SAS Logo" class="logo-image">
-                <span class="logo-text">SAS Policy Value Hub Services</span>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="/" onclick="goToHome()">Home</a></li>
-                <li><a href="#motor-types" onclick="scrollToSection('motor-types')">Insurance Types</a></li>
-                <li><a href="#features" onclick="scrollToSection('features')">Features</a></li>
-                <li><a href="#benefits" onclick="scrollToSection('benefits')">Benefits</a></li>
-                <li><a href="#quote" onclick="scrollToSection('quote')">Get Quote</a></li>
-                <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
-            </ul>
-            <div class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+      <nav class="container">
+        <div class="logo" onclick="scrollToSection('home')">
+          <img src="/Assets/SAS Logo.png" alt="SAS Logo" class="logo-image" />
+          <span class="logo-text">SAS Policy Value Hub Services</span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" onclick="scrollToSection('home')">Home</a></li>
+          <li>
+            <a href="#services" onclick="scrollToSection('services')"
+              >Services</a
+            >
+          </li>
+          <li><a href="#about" onclick="scrollToSection('about')">About</a></li>
+          <li>
+            <a href="#associates" onclick="scrollToSection('associates')"
+              >Partners</a
+            >
+          </li>
+          <li>
+            <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
+          </li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
     </header>
 
     <!-- Hero Section -->

@@ -11,27 +11,35 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <h2>SparkForge</h2>
-                    <div class="logo-spark">⚡</div>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../index.html#services">Services</a></li>
-                    <li><a href="../index.html#portfolio">Portfolio</a></li>
-                    <li><a href="../index.html#team">Team</a></li>
-                    <li><a href="../index.html#contact">Contact</a></li>
-                </ul>
-                <div class="nav-toggle">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
-        </nav>
+    <header id="header">
+      <nav class="container">
+        <div class="logo" onclick="scrollToSection('home')">
+          <img src="/Assets/SAS Logo.png" alt="SAS Logo" class="logo-image" />
+          <span class="logo-text">SAS Policy Value Hub Services</span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" onclick="scrollToSection('home')">Home</a></li>
+          <li>
+            <a href="#services" onclick="scrollToSection('services')"
+              >Services</a
+            >
+          </li>
+          <li><a href="#about" onclick="scrollToSection('about')">About</a></li>
+          <li>
+            <a href="#associates" onclick="scrollToSection('associates')"
+              >Partners</a
+            >
+          </li>
+          <li>
+            <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
+          </li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
     </header>
 
     <!-- Hero Section -->
