@@ -123,16 +123,8 @@ if (heroSection) {
   heroObserver.observe(heroSection);
 }
 
-// Add parallax effect to hero section
-window.addEventListener("scroll", () => {
-  const scrolled = window.pageYOffset;
-  const parallaxElements = document.querySelectorAll(".about-hero");
-
-  parallaxElements.forEach((element) => {
-    const speed = 0.5;
-    element.style.transform = `translateY(${scrolled * speed}px)`;
-  });
-});
+// REMOVED PARALLAX EFFECT COMPLETELY - This was causing the issue
+// No more parallax scrolling animations that were interfering with section positioning
 
 // Enhanced scroll animations with staggered timing
 function initStaggeredAnimations() {
@@ -189,6 +181,7 @@ function initStepAnimations() {
     if (stepNumber) {
       step.addEventListener("mouseenter", () => {
         stepNumber.style.transform = "scale(1.1) rotate(5deg)";
+        stepNumber.style.transition = "transform 0.3s ease";
       });
 
       step.addEventListener("mouseleave", () => {
@@ -258,7 +251,7 @@ function initFloatingNav() {
   fab.className = "floating-nav";
   fab.innerHTML = `
         <div class="fab-main">
-            <span>📍</span>
+            <span>🔖</span>
         </div>
         <div class="fab-options">
             <a href="#about" title="Top">🔝</a>
@@ -473,7 +466,8 @@ document.addEventListener("keydown", function (e) {
     activeElements.forEach((el) => {
       if (
         el.classList.contains("nav-links") ||
-        el.classList.contains("menu-toggle")
+        el.classList.contains("menu-toggle") ||
+        el.classList.contains("floating-nav")
       ) {
         el.classList.remove("active");
       }
@@ -510,32 +504,6 @@ window.addEventListener("load", function () {
   );
 });
 
-  document.addEventListener("mouseleave", () => {
-    cursor.style.opacity = "0";
-  });
-
-  // Enhance cursor for interactive elements
-  const interactiveElements = document.querySelectorAll(
-    "a, button, .team-member, .mvv-card, .apart-item"
-  );
-  interactiveElements.forEach((el) => {
-    el.addEventListener("mouseenter", () => {
-      cursor.style.transform = "scale(1.5)";
-      cursor.style.backgroundColor = "rgba(59, 130, 246, 0.1)";
-    });
-
-    el.addEventListener("mouseleave", () => {
-      cursor.style.transform = "scale(1)";
-      cursor.style.backgroundColor = "transparent";
-    });
-  });
-
-
-// Initialize custom cursor on desktop only
-if (window.innerWidth > 768) {
-  initCustomCursor();
-}
-
 // Add performance monitoring
 const perfObserver = new PerformanceObserver((list) => {
   for (const entry of list.getEntries()) {
@@ -550,3 +518,168 @@ const perfObserver = new PerformanceObserver((list) => {
 if ("PerformanceObserver" in window) {
   perfObserver.observe({ entryTypes: ["measure"] });
 }
+
+// Add smooth scroll behavior for better user experience
+document.documentElement.style.scrollBehavior = "smooth";
+
+// Ensure all sections maintain their position
+window.addEventListener("resize", () => {
+  // Reset any transforms that might have been applied
+  const allSections = document.querySelectorAll("section");
+  allSections.forEach((section) => {
+    section.style.transform = "none";
+  });
+});
+
+// Additional utility functions for better user experience
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Optimize scroll performance with debouncing
+const optimizedScrollHandler = debounce(() => {
+  // Any additional scroll-based animations can be added here
+  // without affecting the main sections
+}, 16);
+
+window.addEventListener("scroll", optimizedScrollHandler);
+
+// Add touch support for mobile devices
+let touchStartY = 0;
+let touchEndY = 0;
+
+document.addEventListener("touchstart", (e) => {
+  touchStartY = e.changedTouches[0].screenY;
+});
+
+document.addEventListener("touchend", (e) => {
+  touchEndY = e.changedTouches[0].screenY;
+  handleSwipe();
+});
+
+function handleSwipe() {
+  const swipeThreshold = 50;
+  const diff = touchStartY - touchEndY;
+
+  if (Math.abs(diff) > swipeThreshold) {
+    if (diff > 0) {
+      // Swipe up - could trigger some action
+      console.log("Swiped up");
+    } else {
+      // Swipe down - could trigger some action
+      console.log("Swiped down");
+    }
+  }
+}
+
+// Add accessibility improvements
+function initAccessibilityFeatures() {
+  // Add skip to content link
+  const skipLink = document.createElement("a");
+  skipLink.href = "#about";
+  skipLink.textContent = "Skip to main content";
+  skipLink.className = "skip-link";
+  skipLink.style.cssText = `
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #1e40af;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 10000;
+    transition: top 0.3s ease;
+  `;
+
+  skipLink.addEventListener("focus", () => {
+    skipLink.style.top = "6px";
+  });
+
+  skipLink.addEventListener("blur", () => {
+    skipLink.style.top = "-40px";
+  });
+
+  document.body.insertBefore(skipLink, document.body.firstChild);
+
+  // Add aria-labels to interactive elements
+  const interactiveElements = document.querySelectorAll(
+    "button, a[href], input, select, textarea, [tabindex]"
+  );
+  interactiveElements.forEach((element) => {
+    if (!element.getAttribute("aria-label") && !element.textContent.trim()) {
+      const title = element.getAttribute("title");
+      if (title) {
+        element.setAttribute("aria-label", title);
+      }
+    }
+  });
+}
+
+// Initialize accessibility features
+initAccessibilityFeatures();
+
+// Add print styles support
+function initPrintSupport() {
+  const printStyles = document.createElement("style");
+  printStyles.textContent = `
+    @media print {
+      header, footer, .floating-nav, .scroll-progress {
+        display: none !important;
+      }
+      
+      body {
+        font-size: 12pt;
+        line-height: 1.4;
+      }
+      
+      .about-hero {
+        background: none !important;
+        color: black !important;
+        padding: 20px 0 !important;
+      }
+      
+      .container {
+        max-width: none !important;
+        padding: 0 !important;
+      }
+      
+      section {
+        page-break-inside: avoid;
+        margin-bottom: 30px;
+      }
+      
+      .team-member, .mvv-card, .apart-item {
+        page-break-inside: avoid;
+        margin-bottom: 20px;
+      }
+    }
+  `;
+  document.head.appendChild(printStyles);
+}
+
+initPrintSupport();
+
+// Add final initialization check
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("All About Us page features initialized successfully!");
+
+  // Final check to ensure no unwanted transforms
+  setTimeout(() => {
+    const problematicElements = document.querySelectorAll(
+      ".about-hero, .our-story"
+    );
+    problematicElements.forEach((element) => {
+      element.style.transform = "none";
+      element.style.position = "relative";
+    });
+  }, 1000);
+});

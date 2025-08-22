@@ -610,68 +610,6 @@ nav {
     margin: 0;
 }
 
-/* Map Section */
-.map-section {
-    padding: 80px 0;
-    background: white;
-}
-
-.map-section h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #1e293b;
-    margin-bottom: 3rem;
-    font-weight: 700;
-}
-
-.map-container {
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
-}
-
-.map-placeholder {
-    height: 400px;
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #e2e8f0;
-}
-
-.map-content {
-    text-align: center;
-    padding: 2rem;
-}
-
-.map-content h3 {
-    font-size: 1.8rem;
-    color: #1e293b;
-    margin-bottom: 1rem;
-}
-
-.map-content p {
-    color: #64748b;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-}
-
-.map-link {
-    display: inline-block;
-    background: linear-gradient(45deg, #1e40af, #3b82f6);
-    color: white;
-    padding: 12px 24px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.map-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(30, 64, 175, 0.3);
-}
-
 /* Footer */
 footer {
     background: #0f172a;

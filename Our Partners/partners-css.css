@@ -283,7 +283,6 @@ nav {
 
 .partner-card:hover .partner-logo {
     border-color: #3b82f6;
-    background: linear-gradient(135deg, #3b82f6, #1e40af);
     color: white;
 }
 
