@@ -548,6 +548,8 @@ document.addEventListener('DOMContentLoaded', function() {
     images.forEach(img => imageObserver.observe(img));
 });
 
+
+
 // Analytics and tracking (placeholder)
 function trackEvent(eventName, eventData = {}) {
     // Placeholder for analytics tracking

@@ -543,45 +543,140 @@ nav {
 /* Associates Section */
 .associates {
     padding: 80px 0;
-    background: #f8fafc;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    position: relative;
+}
+
+.associates::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="80" cy="40" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="40" cy="80" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+    opacity: 0.5;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    position: relative;
+    z-index: 1;
 }
 
 .associates-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
-    align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .associate-logo {
     background: white;
-    padding: 1.5rem;
-    border-radius: 15px;
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
     text-align: center;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-    border: 2px solid #f1f5f9;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 3px solid transparent;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.associate-logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.6s;
+}
+
+.associate-logo:hover::before {
+    left: 100%;
 }
 
 .associate-logo:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
     border-color: #3b82f6;
+    background: linear-gradient(145deg, #ffffff, #f8fafc);
 }
 
 .associate-logo img {
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 100px;
     object-fit: contain;
-    filter: grayscale(80%);
-    transition: filter 0.3s ease;
+    margin-bottom: 1rem;
+    transition: all 0.4s ease;
+    filter: brightness(0.8) contrast(1.1);
 }
 
 .associate-logo:hover img {
-    filter: grayscale(0%);
+    transform: scale(1.1);
+    filter: brightness(1) contrast(1.2);
 }
+
+.associate-logo h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-top: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.associate-logo:hover h3 {
+    color: #3b82f6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .associates {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .associates-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .associate-logo {
+        padding: 1.5rem 1rem;
+    }
+    
+    .associate-logo img {
+        width: 100px;
+        height: 70px;
+    }
+}
+
 
 /* Quote Form Section */
 .quote-form-section {
