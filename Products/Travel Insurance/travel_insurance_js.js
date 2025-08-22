@@ -304,7 +304,9 @@ function showTravelTips(travelType) {
         console.log(`Travel Tips for ${travelType}:`, tips);
         // You could display these in a modal or section
     }
-} Mobile menu functionality
+} 
+
+// Mobile menu toggle and header effects
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
 const header = document.getElementById('header');
