@@ -12,9 +12,10 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%;
 }
 
 /* Header */
@@ -72,7 +73,6 @@ nav {
 }
 
 .nav-links {
-    width: 100%;
     display: flex;
     list-style: none;
     gap: 2rem;
