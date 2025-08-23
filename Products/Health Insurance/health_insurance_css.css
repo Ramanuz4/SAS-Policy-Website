@@ -72,6 +72,7 @@ nav {
 }
 
 .nav-links {
+    width: 100%;
     display: flex;
     list-style: none;
     gap: 2rem;
@@ -843,6 +844,11 @@ footer {
     color: #3b82f6;
     transform: translateX(3px);
     transition: all 0.3s ease;
+}
+
+.footer-section a.active {
+    color: #3b82f6;
+    font-weight: 600;
 }
 
 .footer-social {

@@ -72,6 +72,7 @@ nav {
 }
 
 .nav-links {
+    width: 100%;
     display: flex;
     list-style: none;
     gap: 2rem;
@@ -668,7 +669,7 @@ footer {
     display: block;
 }
 
-.footer-section a:hover {
+.footer-section .translate:hover {
     color: #3b82f6;
     transform: translateX(3px);
     transition: all 0.3s ease;

@@ -1,538 +1,689 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Insurance - SAS Policy Value Hub Services</title>
-    <meta name="description" content="Comprehensive home insurance coverage to protect your property and belongings. Get the best home insurance policies with SAS Policy Value Hub Services.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="home_insurance_css.css">
-</head>
-<body>
+    <meta
+      name="description"
+      content="Comprehensive home insurance coverage to protect your property and belongings. Get the best home insurance policies with SAS Policy Value Hub Services."
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="home_insurance_css.css" />
+  </head>
+  <body>
     <!-- Header -->
     <header id="header">
-        <nav class="container">
-            <div class="logo" onclick="window.location.href='../index.html'">
-                <img src="/Assets/SAS Logo.png" alt="SAS Logo" class="logo-image">
-                <span class="logo-text">SAS Policy Value Hub Services</span>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="/index.html">Home</a></li>
-            <li><a href="/Products/Health Insurance/health_insurance_html.html" onclick="scrollToSection('services')"
-              >Health Insurance</a </li>
-                <li>
-            <a href="/Products/Motor Insurance/motor_insurance_html.html" onclick="scrollToSection('associates')"
+      <nav class="container">
+        <div class="logo" onclick="window.location.href='../index.html'">
+          <img src="/Assets/SAS Logo.png" alt="SAS Logo" class="logo-image" />
+          <span class="logo-text">SAS Policy Value Hub Services</span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/index.html">Home</a></li>
+          <li>
+            <a
+              href="/Products/Health Insurance/health_insurance_html.html"
+              onclick="scrollToSection('services')"
+              >Health Insurance</a
+            >
+          </li>
+          <li>
+            <a
+              href="/Products/Life Insurance/life_insurance_html.html"
+              onclick="scrollToSection('associates')"
+              >Life Insurance</a
+            >
+          </li>
+          <li>
+            <a href="/Products/Motor Insurance/motor_insurance_html.html"
               >Motor Insurance</a
             >
           </li>
-                <li><a href="/Products/Travel Insurance/travel_insurance_html.html">Travel Insurance</a></li>
-            </ul>
-            <div class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+          <li>
+            <a href="/Products/Travel Insurance/travel_insurance_html.html"
+              >Travel Insurance</a
+            >
+          </li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-icon">🏠</div>
-                <h1>Comprehensive Home Insurance Protection</h1>
-                <p class="subtitle">
-                    Safeguard your most valuable asset with our comprehensive home insurance policies. 
-                    From structure damage to personal belongings, we've got you covered.
-                </p>
-                <div class="hero-features">
-                    <div class="hero-feature">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>Complete Protection</span>
-                    </div>
-                    <div class="hero-feature">
-                        <i class="fas fa-rupee-sign"></i>
-                        <span>Affordable Premiums</span>
-                    </div>
-                    <div class="hero-feature">
-                        <i class="fas fa-clock"></i>
-                        <span>Quick Claims</span>
-                    </div>
-                </div>
-                <div class="cta-buttons">
-                    <button class="cta-button primary" onclick="scrollToSection('quote-section')">
-                        Get Free Quote
-                    </button>
-                    <button class="cta-button secondary" onclick="scrollToSection('contact-section')">
-                        Contact Expert
-                    </button>
-                </div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-icon">🏠</div>
+          <h1>Comprehensive Home Insurance Protection</h1>
+          <p class="subtitle">
+            Safeguard your most valuable asset with our comprehensive home
+            insurance policies. From structure damage to personal belongings,
+            we've got you covered.
+          </p>
+          <div class="hero-features">
+            <div class="hero-feature">
+              <i class="fas fa-shield-alt"></i>
+              <span>Complete Protection</span>
             </div>
+            <div class="hero-feature">
+              <i class="fas fa-rupee-sign"></i>
+              <span>Affordable Premiums</span>
+            </div>
+            <div class="hero-feature">
+              <i class="fas fa-clock"></i>
+              <span>Quick Claims</span>
+            </div>
+          </div>
+          <div class="cta-buttons">
+            <button
+              class="cta-button primary"
+              onclick="scrollToSection('quote-section')"
+            >
+              Get Free Quote
+            </button>
+            <button
+              class="cta-button secondary"
+              onclick="scrollToSection('contact-section')"
+            >
+              Contact Expert
+            </button>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- What is Home Insurance Section -->
     <section class="what-is-home-insurance">
-        <div class="container">
-            <div class="content-wrapper">
-                <div class="text-content fade-in">
-                    <h2>What is Home Insurance?</h2>
-                    <p class="lead">
-                        Home insurance is a comprehensive protection plan that safeguards your home and belongings 
-                        against various risks including fire, theft, natural disasters, and liability claims.
-                    </p>
-                    <p>
-                        Your home is likely your most significant investment, and home insurance ensures that you're 
-                        financially protected against unexpected events that could damage your property or result in 
-                        costly repairs. It provides peace of mind knowing that your family's shelter and possessions 
-                        are secure.
-                    </p>
-                    <div class="key-benefits">
-                        <div class="benefit-item">
-                            <i class="fas fa-home"></i>
-                            <div>
-                                <h4>Structure Protection</h4>
-                                <p>Covers damage to your home's structure from covered perils</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-couch"></i>
-                            <div>
-                                <h4>Contents Coverage</h4>
-                                <p>Protects your personal belongings and household items</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-umbrella"></i>
-                            <div>
-                                <h4>Liability Protection</h4>
-                                <p>Covers legal expenses and damages if someone is injured on your property</p>
-                            </div>
-                        </div>
-                    </div>
+      <div class="container">
+        <div class="content-wrapper">
+          <div class="text-content fade-in">
+            <h2>What is Home Insurance?</h2>
+            <p class="lead">
+              Home insurance is a comprehensive protection plan that safeguards
+              your home and belongings against various risks including fire,
+              theft, natural disasters, and liability claims.
+            </p>
+            <p>
+              Your home is likely your most significant investment, and home
+              insurance ensures that you're financially protected against
+              unexpected events that could damage your property or result in
+              costly repairs. It provides peace of mind knowing that your
+              family's shelter and possessions are secure.
+            </p>
+            <div class="key-benefits">
+              <div class="benefit-item">
+                <i class="fas fa-home"></i>
+                <div>
+                  <h4>Structure Protection</h4>
+                  <p>
+                    Covers damage to your home's structure from covered perils
+                  </p>
                 </div>
-                <div class="image-content fade-in">
-                    <img src="/Assets/home-insurance-illustration.jpg" alt="Home Insurance Protection" class="main-image">
-                    <div class="stats-overlay">
-                        <div class="stat">
-                            <span class="stat-number" data-count="95">0</span>
-                            <span class="stat-label">% Claims Settled</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number" data-count="24">0</span>
-                            <span class="stat-label">Hour Support</span>
-                        </div>
-                    </div>
+              </div>
+              <div class="benefit-item">
+                <i class="fas fa-couch"></i>
+                <div>
+                  <h4>Contents Coverage</h4>
+                  <p>Protects your personal belongings and household items</p>
                 </div>
+              </div>
+              <div class="benefit-item">
+                <i class="fas fa-umbrella"></i>
+                <div>
+                  <h4>Liability Protection</h4>
+                  <p>
+                    Covers legal expenses and damages if someone is injured on
+                    your property
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="image-content fade-in">
+            <img
+              src="/Assets/home-insurance-illustration.jpg"
+              alt="Home Insurance Protection"
+              class="main-image"
+            />
+            <div class="stats-overlay">
+              <div class="stat">
+                <span class="stat-number" data-count="95">0</span>
+                <span class="stat-label">% Claims Settled</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number" data-count="24">0</span>
+                <span class="stat-label">Hour Support</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Types of Home Insurance -->
     <section class="insurance-types">
-        <div class="container">
-            <h2 class="section-title fade-in">Types of Home Insurance Coverage</h2>
-            <p class="section-subtitle fade-in">
-                Choose the right coverage that fits your needs and budget
+      <div class="container">
+        <h2 class="section-title fade-in">Types of Home Insurance Coverage</h2>
+        <p class="section-subtitle fade-in">
+          Choose the right coverage that fits your needs and budget
+        </p>
+
+        <div class="types-grid">
+          <!-- Basic Home Insurance -->
+          <div class="type-card fade-in">
+            <div class="type-icon">🏠</div>
+            <h3>Basic Home Insurance</h3>
+            <p class="type-description">
+              Essential coverage for your home structure and basic personal
+              belongings at an affordable price.
             </p>
-            
-            <div class="types-grid">
-                <!-- Basic Home Insurance -->
-                <div class="type-card fade-in">
-                    <div class="type-icon">🏠</div>
-                    <h3>Basic Home Insurance</h3>
-                    <p class="type-description">
-                        Essential coverage for your home structure and basic personal belongings at an affordable price.
-                    </p>
-                    <ul class="coverage-list">
-                        <li><i class="fas fa-check"></i> Fire and lightning damage</li>
-                        <li><i class="fas fa-check"></i> Explosion and implosion</li>
-                        <li><i class="fas fa-check"></i> Riot and malicious damage</li>
-                        <li><i class="fas fa-check"></i> Storm and flood damage</li>
-                        <li><i class="fas fa-check"></i> Burglary and theft</li>
-                    </ul>
-                    <div class="price-range">
-                        <span>Starting from ₹3,000/year</span>
-                    </div>
-                    <button class="select-plan-btn" onclick="selectPlan('basic')">Select This Plan</button>
-                </div>
-
-                <!-- Comprehensive Home Insurance -->
-                <div class="type-card featured fade-in">
-                    <div class="featured-badge">Most Popular</div>
-                    <div class="type-icon">🏡</div>
-                    <h3>Comprehensive Home Insurance</h3>
-                    <p class="type-description">
-                        Complete protection for your home, contents, and additional living expenses.
-                    </p>
-                    <ul class="coverage-list">
-                        <li><i class="fas fa-check"></i> All basic coverage</li>
-                        <li><i class="fas fa-check"></i> Contents and personal belongings</li>
-                        <li><i class="fas fa-check"></i> Temporary accommodation</li>
-                        <li><i class="fas fa-check"></i> Personal liability coverage</li>
-                        <li><i class="fas fa-check"></i> Home appliance protection</li>
-                        <li><i class="fas fa-check"></i> Loss of rent coverage</li>
-                    </ul>
-                    <div class="price-range">
-                        <span>Starting from ₹8,000/year</span>
-                    </div>
-                    <button class="select-plan-btn" onclick="selectPlan('comprehensive')">Select This Plan</button>
-                </div>
-
-                <!-- Premium Home Insurance -->
-                <div class="type-card fade-in">
-                    <div class="type-icon">🏰</div>
-                    <h3>Premium Home Insurance</h3>
-                    <p class="type-description">
-                        Ultimate protection with enhanced coverage limits and premium services.
-                    </p>
-                    <ul class="coverage-list">
-                        <li><i class="fas fa-check"></i> All comprehensive coverage</li>
-                        <li><i class="fas fa-check"></i> High-value items coverage</li>
-                        <li><i class="fas fa-check"></i> Identity theft protection</li>
-                        <li><i class="fas fa-check"></i> Home security systems</li>
-                        <li><i class="fas fa-check"></i> 24/7 emergency services</li>
-                        <li><i class="fas fa-check"></i> Legal expense coverage</li>
-                    </ul>
-                    <div class="price-range">
-                        <span>Starting from ₹15,000/year</span>
-                    </div>
-                    <button class="select-plan-btn" onclick="selectPlan('premium')">Select This Plan</button>
-                </div>
+            <ul class="coverage-list">
+              <li><i class="fas fa-check"></i> Fire and lightning damage</li>
+              <li><i class="fas fa-check"></i> Explosion and implosion</li>
+              <li><i class="fas fa-check"></i> Riot and malicious damage</li>
+              <li><i class="fas fa-check"></i> Storm and flood damage</li>
+              <li><i class="fas fa-check"></i> Burglary and theft</li>
+            </ul>
+            <div class="price-range">
+              <span>Starting from ₹3,000/year</span>
             </div>
+            <button class="select-plan-btn" onclick="selectPlan('basic')">
+              Select This Plan
+            </button>
+          </div>
+
+          <!-- Comprehensive Home Insurance -->
+          <div class="type-card featured fade-in">
+            <div class="featured-badge">Most Popular</div>
+            <div class="type-icon">🏡</div>
+            <h3>Comprehensive Home Insurance</h3>
+            <p class="type-description">
+              Complete protection for your home, contents, and additional living
+              expenses.
+            </p>
+            <ul class="coverage-list">
+              <li><i class="fas fa-check"></i> All basic coverage</li>
+              <li>
+                <i class="fas fa-check"></i> Contents and personal belongings
+              </li>
+              <li><i class="fas fa-check"></i> Temporary accommodation</li>
+              <li><i class="fas fa-check"></i> Personal liability coverage</li>
+              <li><i class="fas fa-check"></i> Home appliance protection</li>
+              <li><i class="fas fa-check"></i> Loss of rent coverage</li>
+            </ul>
+            <div class="price-range">
+              <span>Starting from ₹8,000/year</span>
+            </div>
+            <button
+              class="select-plan-btn"
+              onclick="selectPlan('comprehensive')"
+            >
+              Select This Plan
+            </button>
+          </div>
+
+          <!-- Premium Home Insurance -->
+          <div class="type-card fade-in">
+            <div class="type-icon">🏰</div>
+            <h3>Premium Home Insurance</h3>
+            <p class="type-description">
+              Ultimate protection with enhanced coverage limits and premium
+              services.
+            </p>
+            <ul class="coverage-list">
+              <li><i class="fas fa-check"></i> All comprehensive coverage</li>
+              <li><i class="fas fa-check"></i> High-value items coverage</li>
+              <li><i class="fas fa-check"></i> Identity theft protection</li>
+              <li><i class="fas fa-check"></i> Home security systems</li>
+              <li><i class="fas fa-check"></i> 24/7 emergency services</li>
+              <li><i class="fas fa-check"></i> Legal expense coverage</li>
+            </ul>
+            <div class="price-range">
+              <span>Starting from ₹15,000/year</span>
+            </div>
+            <button class="select-plan-btn" onclick="selectPlan('premium')">
+              Select This Plan
+            </button>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Coverage Details -->
     <section class="coverage-details">
-        <div class="container">
-            <h2 class="section-title fade-in">What's Covered Under Home Insurance?</h2>
-            
-            <div class="coverage-categories">
-                <div class="coverage-category fade-in">
-                    <div class="category-icon">🏗️</div>
-                    <h3>Structure Coverage</h3>
-                    <div class="coverage-items">
-                        <div class="coverage-item">
-                            <i class="fas fa-home"></i>
-                            <div>
-                                <h4>Building Structure</h4>
-                                <p>Walls, roof, floors, and foundation damage due to covered perils</p>
-                            </div>
-                        </div>
-                        <div class="coverage-item">
-                            <i class="fas fa-tools"></i>
-                            <div>
-                                <h4>Attached Structures</h4>
-                                <p>Garages, decks, and permanently attached structures</p>
-                            </div>
-                        </div>
-                        <div class="coverage-item">
-                            <i class="fas fa-swimming-pool"></i>
-                            <div>
-                                <h4>Other Structures</h4>
-                                <p>Fences, swimming pools, and detached structures on your property</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title fade-in">
+          What's Covered Under Home Insurance?
+        </h2>
 
-                <div class="coverage-category fade-in">
-                    <div class="category-icon">📦</div>
-                    <h3>Contents Coverage</h3>
-                    <div class="coverage-items">
-                        <div class="coverage-item">
-                            <i class="fas fa-couch"></i>
-                            <div>
-                                <h4>Furniture & Appliances</h4>
-                                <p>All household furniture, electronics, and home appliances</p>
-                            </div>
-                        </div>
-                        <div class="coverage-item">
-                            <i class="fas fa-tshirt"></i>
-                            <div>
-                                <h4>Personal Belongings</h4>
-                                <p>Clothing, jewelry, books, and personal items</p>
-                            </div>
-                        </div>
-                        <div class="coverage-item">
-                            <i class="fas fa-gem"></i>
-                            <div>
-                                <h4>Valuable Items</h4>
-                                <p>High-value items like jewelry, art, and collectibles (with additional coverage)</p>
-                            </div>
-                        </div>
-                    </div>
+        <div class="coverage-categories">
+          <div class="coverage-category fade-in">
+            <div class="category-icon">🏗️</div>
+            <h3>Structure Coverage</h3>
+            <div class="coverage-items">
+              <div class="coverage-item">
+                <i class="fas fa-home"></i>
+                <div>
+                  <h4>Building Structure</h4>
+                  <p>
+                    Walls, roof, floors, and foundation damage due to covered
+                    perils
+                  </p>
                 </div>
-
-                <div class="coverage-category fade-in">
-                    <div class="category-icon">⚖️</div>
-                    <h3>Liability Coverage</h3>
-                    <div class="coverage-items">
-                        <div class="coverage-item">
-                            <i class="fas fa-user-injured"></i>
-                            <div>
-                                <h4>Personal Injury</h4>
-                                <p>Medical expenses if someone is injured on your property</p>
-                            </div>
-                        </div>
-                        <div class="coverage-item">
-                            <i class="fas fa-gavel"></i>
-                            <div>
-                                <h4>Legal Defense</h4>
-                                <p>Legal fees and court costs for liability claims</p>
-                            </div>
-                        </div>
-                        <div class="coverage-item">
-                            <i class="fas fa-hand-holding-usd"></i>
-                            <div>
-                                <h4>Property Damage</h4>
-                                <p>Damage you accidentally cause to others' property</p>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <div class="coverage-item">
+                <i class="fas fa-tools"></i>
+                <div>
+                  <h4>Attached Structures</h4>
+                  <p>Garages, decks, and permanently attached structures</p>
                 </div>
+              </div>
+              <div class="coverage-item">
+                <i class="fas fa-swimming-pool"></i>
+                <div>
+                  <h4>Other Structures</h4>
+                  <p>
+                    Fences, swimming pools, and detached structures on your
+                    property
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="coverage-category fade-in">
+            <div class="category-icon">📦</div>
+            <h3>Contents Coverage</h3>
+            <div class="coverage-items">
+              <div class="coverage-item">
+                <i class="fas fa-couch"></i>
+                <div>
+                  <h4>Furniture & Appliances</h4>
+                  <p>
+                    All household furniture, electronics, and home appliances
+                  </p>
+                </div>
+              </div>
+              <div class="coverage-item">
+                <i class="fas fa-tshirt"></i>
+                <div>
+                  <h4>Personal Belongings</h4>
+                  <p>Clothing, jewelry, books, and personal items</p>
+                </div>
+              </div>
+              <div class="coverage-item">
+                <i class="fas fa-gem"></i>
+                <div>
+                  <h4>Valuable Items</h4>
+                  <p>
+                    High-value items like jewelry, art, and collectibles (with
+                    additional coverage)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="coverage-category fade-in">
+            <div class="category-icon">⚖️</div>
+            <h3>Liability Coverage</h3>
+            <div class="coverage-items">
+              <div class="coverage-item">
+                <i class="fas fa-user-injured"></i>
+                <div>
+                  <h4>Personal Injury</h4>
+                  <p>Medical expenses if someone is injured on your property</p>
+                </div>
+              </div>
+              <div class="coverage-item">
+                <i class="fas fa-gavel"></i>
+                <div>
+                  <h4>Legal Defense</h4>
+                  <p>Legal fees and court costs for liability claims</p>
+                </div>
+              </div>
+              <div class="coverage-item">
+                <i class="fas fa-hand-holding-usd"></i>
+                <div>
+                  <h4>Property Damage</h4>
+                  <p>Damage you accidentally cause to others' property</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Why Choose SAS -->
     <section class="why-choose-sas">
-        <div class="container">
-            <h2 class="section-title fade-in">Why Choose SAS Policy Value Hub for Home Insurance?</h2>
-            <p class="section-subtitle fade-in">
-                We provide exceptional service and comprehensive coverage to protect your home
+      <div class="container">
+        <h2 class="section-title fade-in">
+          Why Choose SAS Policy Value Hub for Home Insurance?
+        </h2>
+        <p class="section-subtitle fade-in">
+          We provide exceptional service and comprehensive coverage to protect
+          your home
+        </p>
+
+        <div class="features-grid">
+          <div class="feature-card fade-in">
+            <div class="feature-icon">🎯</div>
+            <h3>Expert Guidance</h3>
+            <p>
+              Our experienced advisors help you choose the perfect coverage for
+              your specific needs and budget.
             </p>
-            
-            <div class="features-grid">
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Expert Guidance</h3>
-                    <p>Our experienced advisors help you choose the perfect coverage for your specific needs and budget.</p>
-                </div>
-                
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">💰</div>
-                    <h3>Competitive Rates</h3>
-                    <p>Get the best rates in the market with our strong relationships with top insurance providers.</p>
-                </div>
-                
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Quick Claims Processing</h3>
-                    <p>Fast and hassle-free claims settlement with our dedicated support team.</p>
-                </div>
-                
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">📞</div>
-                    <h3>24/7 Support</h3>
-                    <p>Round-the-clock customer support for all your insurance needs and emergency assistance.</p>
-                </div>
-                
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Trusted Partners</h3>
-                    <p>We work with India's leading insurance companies to provide you with reliable coverage.</p>
-                </div>
-                
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">📋</div>
-                    <h3>Customized Solutions</h3>
-                    <p>Tailored insurance plans that match your home's unique characteristics and your family's needs.</p>
-                </div>
-            </div>
+          </div>
+
+          <div class="feature-card fade-in">
+            <div class="feature-icon">💰</div>
+            <h3>Competitive Rates</h3>
+            <p>
+              Get the best rates in the market with our strong relationships
+              with top insurance providers.
+            </p>
+          </div>
+
+          <div class="feature-card fade-in">
+            <div class="feature-icon">⚡</div>
+            <h3>Quick Claims Processing</h3>
+            <p>
+              Fast and hassle-free claims settlement with our dedicated support
+              team.
+            </p>
+          </div>
+
+          <div class="feature-card fade-in">
+            <div class="feature-icon">📞</div>
+            <h3>24/7 Support</h3>
+            <p>
+              Round-the-clock customer support for all your insurance needs and
+              emergency assistance.
+            </p>
+          </div>
+
+          <div class="feature-card fade-in">
+            <div class="feature-icon">🔒</div>
+            <h3>Trusted Partners</h3>
+            <p>
+              We work with India's leading insurance companies to provide you
+              with reliable coverage.
+            </p>
+          </div>
+
+          <div class="feature-card fade-in">
+            <div class="feature-icon">📋</div>
+            <h3>Customized Solutions</h3>
+            <p>
+              Tailored insurance plans that match your home's unique
+              characteristics and your family's needs.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Quote Section -->
     <section class="quote-section" id="quote-section">
-        <div class="container">
-            <h2 class="section-title">Get Your Free Home Insurance Quote</h2>
-            <p class="section-subtitle">
-                Fill out the form below and get a personalized quote within minutes
-            </p>
-            
-            <form class="quote-form" id="homeQuoteForm">
-                <div id="quoteMessage"></div>
-                
-                <div class="form-section">
-                    <h3>Personal Information</h3>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="firstName">First Name *</label>
-                            <input type="text" id="firstName" name="firstName" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="lastName">Last Name *</label>
-                            <input type="text" id="lastName" name="lastName" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Get Your Free Home Insurance Quote</h2>
+        <p class="section-subtitle">
+          Fill out the form below and get a personalized quote within minutes
+        </p>
 
-                <div class="form-section">
-                    <h3>Property Information</h3>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="propertyType">Property Type *</label>
-                            <select id="propertyType" name="propertyType" required>
-                                <option value="">Select Property Type</option>
-                                <option value="apartment">Apartment</option>
-                                <option value="independent-house">Independent House</option>
-                                <option value="villa">Villa</option>
-                                <option value="penthouse">Penthouse</option>
-                                <option value="row-house">Row House</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="propertyAge">Property Age *</label>
-                            <select id="propertyAge" name="propertyAge" required>
-                                <option value="">Select Age</option>
-                                <option value="0-5">0-5 years</option>
-                                <option value="6-10">6-10 years</option>
-                                <option value="11-20">11-20 years</option>
-                                <option value="21-30">21-30 years</option>
-                                <option value="30+">30+ years</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="propertyValue">Property Value (₹) *</label>
-                            <input type="number" id="propertyValue" name="propertyValue" min="100000" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="contentsValue">Contents Value (₹)</label>
-                            <input type="number" id="contentsValue" name="contentsValue" min="0">
-                        </div>
-                    </div>
-                </div>
+        <form class="quote-form" id="homeQuoteForm">
+          <div id="quoteMessage"></div>
 
-                <div class="form-section">
-                    <h3>Coverage Preferences</h3>
-                    <div class="form-group">
-                        <label for="coverageType">Preferred Coverage Type *</label>
-                        <select id="coverageType" name="coverageType" required>
-                            <option value="">Select Coverage Type</option>
-                            <option value="basic">Basic Home Insurance</option>
-                            <option value="comprehensive">Comprehensive Home Insurance</option>
-                            <option value="premium">Premium Home Insurance</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="additionalRequirements">Additional Requirements</label>
-                        <textarea id="additionalRequirements" name="additionalRequirements" rows="4" 
-                                  placeholder="Tell us about any specific coverage needs or questions..."></textarea>
-                    </div>
-                </div>
+          <div class="form-section">
+            <h3>Personal Information</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required />
+              </div>
+            </div>
+          </div>
 
-                <button type="submit" class="submit-btn">
-                    <span class="btn-text">Get My Free Quote</span>
-                    <span class="loading" style="display: none;"></span>
-                </button>
-            </form>
-        </div>
+          <div class="form-section">
+            <h3>Property Information</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="propertyType">Property Type *</label>
+                <select id="propertyType" name="propertyType" required>
+                  <option value="">Select Property Type</option>
+                  <option value="apartment">Apartment</option>
+                  <option value="independent-house">Independent House</option>
+                  <option value="villa">Villa</option>
+                  <option value="penthouse">Penthouse</option>
+                  <option value="row-house">Row House</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="propertyAge">Property Age *</label>
+                <select id="propertyAge" name="propertyAge" required>
+                  <option value="">Select Age</option>
+                  <option value="0-5">0-5 years</option>
+                  <option value="6-10">6-10 years</option>
+                  <option value="11-20">11-20 years</option>
+                  <option value="21-30">21-30 years</option>
+                  <option value="30+">30+ years</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="propertyValue">Property Value (₹) *</label>
+                <input
+                  type="number"
+                  id="propertyValue"
+                  name="propertyValue"
+                  min="100000"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="contentsValue">Contents Value (₹)</label>
+                <input
+                  type="number"
+                  id="contentsValue"
+                  name="contentsValue"
+                  min="0"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>Coverage Preferences</h3>
+            <div class="form-group">
+              <label for="coverageType">Preferred Coverage Type *</label>
+              <select id="coverageType" name="coverageType" required>
+                <option value="">Select Coverage Type</option>
+                <option value="basic">Basic Home Insurance</option>
+                <option value="comprehensive">
+                  Comprehensive Home Insurance
+                </option>
+                <option value="premium">Premium Home Insurance</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="additionalRequirements"
+                >Additional Requirements</label
+              >
+              <textarea
+                id="additionalRequirements"
+                name="additionalRequirements"
+                rows="4"
+                placeholder="Tell us about any specific coverage needs or questions..."
+              ></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <span class="btn-text">Get My Free Quote</span>
+            <span class="loading" style="display: none"></span>
+          </button>
+        </form>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section class="contact-section" id="contact-section">
-        <div class="container">
-            <h2 class="section-title fade-in">Get Expert Advice</h2>
-            <p class="section-subtitle fade-in">
-                Speak with our home insurance experts to find the perfect coverage for your needs
-            </p>
-            
-            <div class="contact-options">
-                <div class="contact-card fade-in">
-                    <div class="contact-icon">📞</div>
-                    <h3>Call Us</h3>
-                    <p>Speak directly with our home insurance experts</p>
-                    <a href="tel:+919876543210" class="contact-btn">+91 98765 43210</a>
-                </div>
-                
-                <div class="contact-card fade-in">
-                    <div class="contact-icon">✉️</div>
-                    <h3>Email Us</h3>
-                    <p>Send us your queries and we'll respond within 24 hours</p>
-                    <a href="mailto:homeinsurance@saspolicyvaluehub.com" class="contact-btn">Send Email</a>
-                </div>
-                
-                <div class="contact-card fade-in">
-                    <div class="contact-icon">💬</div>
-                    <h3>WhatsApp</h3>
-                    <p>Chat with us instantly for quick assistance</p>
-                    <a href="https://wa.me/919289122401" class="contact-btn" target="_blank">Start Chat</a>
-                </div>
-            </div>
+      <div class="container">
+        <h2 class="section-title fade-in">Get Expert Advice</h2>
+        <p class="section-subtitle fade-in">
+          Speak with our home insurance experts to find the perfect coverage for
+          your needs
+        </p>
+
+        <div class="contact-options">
+          <div class="contact-card fade-in">
+            <div class="contact-icon">📞</div>
+            <h3>Call Us</h3>
+            <p>Speak directly with our home insurance experts</p>
+            <a href="tel:+919876543210" class="contact-btn">+91 98765 43210</a>
+          </div>
+
+          <div class="contact-card fade-in">
+            <div class="contact-icon">✉️</div>
+            <h3>Email Us</h3>
+            <p>Send us your queries and we'll respond within 24 hours</p>
+            <a
+              href="mailto:homeinsurance@saspolicyvaluehub.com"
+              class="contact-btn"
+              >Send Email</a
+            >
+          </div>
+
+          <div class="contact-card fade-in">
+            <div class="contact-icon">💬</div>
+            <h3>WhatsApp</h3>
+            <p>Chat with us instantly for quick assistance</p>
+            <a
+              href="https://wa.me/919289122401"
+              class="contact-btn"
+              target="_blank"
+              >Start Chat</a
+            >
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>SAS Policy Value Hub</h3>
-                    <p>
-                        Your trusted partner in insurance solutions. We provide comprehensive coverage 
-                        and expert guidance to protect what matters most to you.
-                    </p>
-                    <div class="footer-social">
-                        <a href="https://www.facebook.com/people/SASpolicyvaluehubservices/61573253426040/" class="social-link" title="Facebook">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@sas_policyvaluehubservices" class="social-link" title="Youtube">
-                            <i class="fa-brands fa-youtube"></i>
-                        </a>
-                        <a href="#" class="social-link" title="LinkedIn">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://www.instagram.com/sas_policyvaluehubservices/?igsh=MXRzNG01anJieHkxYQ%3D%3D" class="social-link" title="Instagram">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="https://wa.me/919289122401" class="social-link" title="WhatsApp">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3>Our Services</h3>
-                    <a href="/Products/Health Insurance/health_insurance_html.html">Health Insurance</a>
-                    <a href="/Products/Life Insurance/life_insurance_html.html">Life Insurance</a>
-                    <a href="/Products/Motor Insurance/motor_insurance_html.html">Motor Insurance</a>
-                    <a href="/Products/Travel Insurance/travel_insurance_html.html">Travel Insurance</a>
-                    <a href="/Products/Home Insurance/home_insurance_html.html">Home Insurance</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <a href="/About Us/about_us_html.html">About Us</a>
-                    <a href="/Our Services/services_html.html">Our Services</a>
-                    <a href="/Our Partners/partners-html.html">Our Partners</a>
-                    <a href="/index.html#contact">Contact Us</a>
-                    <a href="/Privacy Policy/privacy_policy_html.html">Privacy Policy</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <p>🏠 123 Business Center<br>Insurance District<br>New Delhi, India 110001</p>
-                    <p>📞 +91 98765 43210</p>
-                    <p>✉️ info@saspolicyvaluehub.com</p>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>SAS Policy Value Hub</h3>
+            <p>
+              Your trusted partner in insurance solutions. We provide
+              comprehensive coverage and expert guidance to protect what matters
+              most to you.
+            </p>
+            <div class="footer-social">
+              <a
+                href="https://www.facebook.com/people/SASpolicyvaluehubservices/61573253426040/"
+                class="social-link"
+                title="Facebook"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/@sas_policyvaluehubservices"
+                class="social-link"
+                title="Youtube"
+              >
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+              <a href="#" class="social-link" title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/sas_policyvaluehubservices/?igsh=MXRzNG01anJieHkxYQ%3D%3D"
+                class="social-link"
+                title="Instagram"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="https://wa.me/919289122401"
+                class="social-link"
+                title="WhatsApp"
+              >
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 SAS Policy Value Hub Services Pvt Ltd. All rights reserved. | Designed with ❤️ for your security</p>
-            </div>
+          </div>
+          <div class="footer-section">
+            <h3>Our Services</h3>
+            <a href="/Products/Health Insurance/health_insurance_html.html"
+              class="translate">Health Insurance</a
+            >
+            <a href="/Products/Life Insurance/life_insurance_html.html"
+              class="translate">Life Insurance</a
+            >
+            <a href="/Products/Motor Insurance/motor_insurance_html.html"
+              class="translate">Motor Insurance</a
+            >
+            <a href="/Products/Travel Insurance/travel_insurance_html.html"
+              class="translate">Travel Insurance</a
+            >
+            <a href="/Products/Home Insurance/home_insurance_html.html"
+              class="active translate">Home Insurance</a
+            >
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="/About Us/about_us_html.html" class="translate">About Us</a>
+            <a href="/Our Services/services_html.html" class="translate">Our Services</a>
+            <a href="/Our Partners/partners-html.html" class="translate">Our Partners</a>
+            <a href="/index.html#contact" class="translate">Contact Us</a>
+            <a href="/Privacy Policy/privacy_policy_html.html" class="translate">Privacy Policy</a
+            >
+          </div>
+          <div class="footer-section">
+            <h3>Contact Info</h3>
+            <p>
+              🏠 123 Business Center<br />Insurance District<br />New Delhi,
+              India 110001
+            </p>
+            <p>📞 +91 98765 43210</p>
+            <p>✉️ info@saspolicyvaluehub.com</p>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 SAS Policy Value Hub Services Pvt Ltd. All rights
+            reserved. | Designed with ❤️ for your security
+          </p>
+        </div>
+      </div>
     </footer>
 
     <script src="home_insurance_js.js"></script>
-</body>
+  </body>
 </html>
