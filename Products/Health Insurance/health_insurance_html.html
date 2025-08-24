@@ -17,29 +17,56 @@
           <img src="/Assets/SAS Logo.png" alt="SAS Logo" class="logo-image" />
           <span class="logo-text">SAS Policy Value Hub Services</span>
         </div>
-        <ul class="nav-links" id="navLinks">
+        
+        <!-- Desktop Navigation -->
+        <ul class="nav-links desktop-nav" id="navLinks">
           <li><a href="/index.html" onclick="scrollToSection('home')">Home</a></li>
           <li>
-            <a href="/Products/Life Insurance/life_insurance_html.html" onclick="scrollToSection('services')"
-              >Life Insurance</a
-            >
+            <a href="/Products/Life Insurance/life_insurance_html.html" onclick="scrollToSection('services')">Life Insurance</a>
           </li>
           <li><a href="/Products/Motor Insurance/motor_insurance_html.html" onclick="scrollToSection('about')">Motor Insurance</a></li>
           <li>
-            <a href="/Products/Travel Insurance/travel_insurance_html.html" onclick="scrollToSection('associates')"
-              >Travel Insurance</a
-            >
+            <a href="/Products/Travel Insurance/travel_insurance_html.html" onclick="scrollToSection('associates')">Travel Insurance</a>
           </li>
           <li>
-            <a href="/Products/Home Insurance/" onclick="scrollToSection('contact')">Home Insurance</a>
+            <a href="/Products/Home Insurance/home_insurance_html.html" onclick="scrollToSection('contact')">Home Insurance</a>
           </li>
         </ul>
-        <div class="menu-toggle" id="menuToggle">
-          <span></span>
-          <span></span>
-          <span></span>
+
+        <!-- Mobile Hamburger Menu -->
+        <div class="hamburger-menu" id="hamburgerMenu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
         </div>
       </nav>
+
+      <!-- Mobile Navigation Overlay -->
+      <div class="mobile-nav-overlay" id="mobileNavOverlay">
+        <div class="mobile-nav-content">
+          <div class="mobile-nav-header">
+            <div class="mobile-logo">
+              <img src="/Assets/SAS Logo.png" alt="SAS Logo" class="mobile-logo-image" />
+              <span class="mobile-logo-text">SAS Policy Hub</span>
+            </div>
+            <button class="mobile-nav-close" id="mobileNavClose">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <ul class="mobile-nav-links">
+            <li><a href="/index.html" class="mobile-nav-link"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="/Products/Life Insurance/life_insurance_html.html" class="mobile-nav-link"><i class="fas fa-heart"></i>Life Insurance</a></li>
+            <li><a href="/Products/Motor Insurance/motor_insurance_html.html" class="mobile-nav-link"><i class="fas fa-car"></i>Motor Insurance</a></li>
+            <li><a href="/Products/Travel Insurance/travel_insurance_html.html" class="mobile-nav-link"><i class="fas fa-plane"></i>Travel Insurance</a></li>
+            <li><a href="/Products/Home Insurance/" class="mobile-nav-link"><i class="fas fa-home"></i>Home Insurance</a></li>
+            <li><a href="#get-quote" class="mobile-nav-link cta-link"><i class="fas fa-calculator"></i>Get Quote</a></li>
+          </ul>
+          <div class="mobile-nav-footer">
+            <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fas fa-envelope"></i> info@saspolicyvaluehub.com</p>
+          </div>
+        </div>
+      </div>
     </header>
 
     <!-- Hero Section -->
@@ -204,87 +231,6 @@
                     </div>
                     <button class="plan-btn" onclick="openPlanModal('senior')">Learn More</button>
                 </div>
-
-                <div class="type-card fade-in">
-                    <div class="type-header">
-                        <div class="type-icon">🏢</div>
-                        <h3>Group Health Insurance</h3>
-                        <p class="type-description">Employer-provided coverage</p>
-                    </div>
-                    <div class="type-content">
-                        <div class="features">
-                            <h4>Features:</h4>
-                            <ul>
-                                <li>Employer-sponsored plan</li>
-                                <li>Lower premium rates</li>
-                                <li>No medical check-up</li>
-                                <li>Immediate coverage</li>
-                            </ul>
-                        </div>
-                        <div class="ideal-for">
-                            <h4>Ideal For:</h4>
-                            <p>Employed individuals, corporate employees</p>
-                        </div>
-                        <div class="price-range">
-                            <span class="price">₹2,000 - ₹15,000/year</span>
-                        </div>
-                    </div>
-                    <button class="plan-btn" onclick="openPlanModal('group')">Learn More</button>
-                </div>
-
-                <div class="type-card fade-in">
-                    <div class="type-header">
-                        <div class="type-icon">⚕️</div>
-                        <h3>Critical Illness Insurance</h3>
-                        <p class="type-description">Specific disease coverage</p>
-                    </div>
-                    <div class="type-content">
-                        <div class="features">
-                            <h4>Features:</h4>
-                            <ul>
-                                <li>Covers specific critical illnesses</li>
-                                <li>Lump sum payout</li>
-                                <li>Income replacement</li>
-                                <li>Treatment flexibility</li>
-                            </ul>
-                        </div>
-                        <div class="ideal-for">
-                            <h4>Ideal For:</h4>
-                            <p>High-risk individuals, family history concerns</p>
-                        </div>
-                        <div class="price-range">
-                            <span class="price">₹3,000 - ₹20,000/year</span>
-                        </div>
-                    </div>
-                    <button class="plan-btn" onclick="openPlanModal('critical')">Learn More</button>
-                </div>
-
-                <div class="type-card fade-in">
-                    <div class="type-header">
-                        <div class="type-icon">💊</div>
-                        <h3>Top-up Insurance</h3>
-                        <p class="type-description">Additional coverage supplement</p>
-                    </div>
-                    <div class="type-content">
-                        <div class="features">
-                            <h4>Features:</h4>
-                            <ul>
-                                <li>Supplements existing policy</li>
-                                <li>Higher coverage at lower cost</li>
-                                <li>Deductible-based activation</li>
-                                <li>Flexible sum insured</li>
-                            </ul>
-                        </div>
-                        <div class="ideal-for">
-                            <h4>Ideal For:</h4>
-                            <p>Those with existing coverage, high medical expenses</p>
-                        </div>
-                        <div class="price-range">
-                            <span class="price">₹2,500 - ₹12,000/year</span>
-                        </div>
-                    </div>
-                    <button class="plan-btn" onclick="openPlanModal('topup')">Learn More</button>
-                </div>
             </div>
         </div>
     </section>
@@ -324,130 +270,6 @@
                     <h3>Tax Benefits</h3>
                     <p>Enjoy tax deductions up to ₹25,000 under Section 80D of the Income Tax Act, plus additional benefits for senior citizens.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Recommendations Section -->
-    <section class="recommendations" id="recommendations">
-        <div class="container">
-            <h2 class="section-title fade-in">Our Top Health Insurance Recommendations</h2>
-            <p class="section-subtitle fade-in">Carefully selected plans from our trusted insurance partners</p>
-            
-            <div class="recommendations-grid">
-                <div class="recommendation-card fade-in premium">
-                    <div class="plan-badge">Best Value</div>
-                    <div class="insurer-logo">
-                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23e11d48'/><text x='50' y='30' text-anchor='middle' font-family='Arial' font-size='8' fill='white' font-weight='bold'>MANIPAL</text><text x='50' y='45' text-anchor='middle' font-family='Arial' font-size='8' fill='white'>CIGNA</text><text x='50' y='60' text-anchor='middle' font-family='Arial' font-size='6' fill='white'>HEALTH</text><text x='50' y='75' text-anchor='middle' font-family='Arial' font-size='6' fill='white'>INSURANCE</text></svg>" alt="Manipal Cigna">
-                    </div>
-                    <h3>Manipal Cigna ProHealth Plus</h3>
-                    <div class="plan-price">
-                        <span class="price">₹8,999</span>
-                        <span class="period">/year</span>
-                    </div>
-                    <div class="plan-details">
-                        <div class="detail-item">
-                            <span class="label">Sum Insured:</span>
-                            <span class="value">₹5 Lakhs</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="label">Room Rent:</span>
-                            <span class="value">No Capping</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="label">Network Hospitals:</span>
-                            <span class="value">7,000+</span>
-                        </div>
-                    </div>
-                    <div class="plan-features">
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li>✅ No waiting period for accidents</li>
-                            <li>✅ Maternity coverage after 3 years</li>
-                            <li>✅ Global coverage for emergencies</li>
-                            <li>✅ Restore benefit up to 100%</li>
-                        </ul>
-                    </div>
-                    <button class="recommend-btn" onclick="requestQuote('manipal-prohealth')">Get Quote</button>
-                </div>
-
-                <div class="recommendation-card fade-in">
-                    <div class="insurer-logo">
-                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%2306b6d4' rx='10'/><text x='50' y='30' text-anchor='middle' font-family='Arial' font-size='10' fill='white' font-weight='bold'>CARE</text><text x='50' y='45' text-anchor='middle' font-family='Arial' font-size='8' fill='white'>HEALTH</text><text x='50' y='60' text-anchor='middle' font-family='Arial' font-size='7' fill='white'>INSURANCE</text></svg>" alt="Care Health">
-                    </div>
-                    <h3>Care Health Joy Plan</h3>
-                    <div class="plan-price">
-                        <span class="price">₹6,750</span>
-                        <span class="period">/year</span>
-                    </div>
-                    <div class="plan-details">
-                        <div class="detail-item">
-                            <span class="label">Sum Insured:</span>
-                            <span class="value">₹3 Lakhs</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="label">Room Rent:</span>
-                            <span class="value">2% of Sum Insured</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="label">Network Hospitals:</span>
-                            <span class="value">9,000+</span>
-                        </div>
-                    </div>
-                    <div class="plan-features">
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li>✅ Instant policy issuance</li>
-                            <li>✅ Free annual health check-up</li>
-                            <li>✅ No co-payment for any age</li>
-                            <li>✅ Coverage for alternative treatments</li>
-                        </ul>
-                    </div>
-                    <button class="recommend-btn" onclick="requestQuote('care-joy')">Get Quote</button>
-                </div>
-
-                <div class="recommendation-card fade-in">
-                    <div class="insurer-logo">
-                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='50,10 60,40 90,40 68,58 78,88 50,70 22,88 32,58 10,40 40,40' fill='%23dc2626'/><text x='50' y='35' text-anchor='middle' font-family='Arial' font-size='7' fill='white' font-weight='bold'>STAR</text><text x='50' y='50' text-anchor='middle' font-family='Arial' font-size='7' fill='white' font-weight='bold'>HEALTH</text></svg>" alt="Star Health">
-                    </div>
-                    <h3>Star Health Family Health Optima</h3>
-                    <div class="plan-price">
-                        <span class="price">₹12,500</span>
-                        <span class="period">/year</span>
-                    </div>
-                    <div class="plan-details">
-                        <div class="detail-item">
-                            <span class="label">Sum Insured:</span>
-                            <span class="value">₹10 Lakhs</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="label">Room Rent:</span>
-                            <span class="value">No Capping</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="label">Network Hospitals:</span>
-                            <span class="value">12,000+</span>
-                        </div>
-                    </div>
-                    <div class="plan-features">
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li>✅ Domiciliary hospitalization</li>
-                            <li>✅ Pre-existing disease coverage</li>
-                            <li>✅ Mental illness coverage</li>
-                            <li>✅ Automatic restoration of sum insured</li>
-                        </ul>
-                    </div>
-                    <button class="recommend-btn" onclick="requestQuote('star-optima')">Get Quote</button>
-                </div>
-            </div>
-            
-            <div class="recommendation-cta fade-in">
-                <h3>Need a Personalized Recommendation?</h3>
-                <p>Our insurance experts will analyze your needs and recommend the best health insurance plan for you and your family.</p>
-                <button class="cta-button primary" onclick="openConsultationModal()">
-                    Get Free Consultation
-                </button>
             </div>
         </div>
     </section>
@@ -497,41 +319,6 @@
                         </select>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="sumInsured">Preferred Sum Insured *</label>
-                        <select id="sumInsured" name="sumInsured" required>
-                            <option value="">Select Sum Insured</option>
-                            <option value="300000">₹3 Lakhs</option>
-                            <option value="500000">₹5 Lakhs</option>
-                            <option value="1000000">₹10 Lakhs</option>
-                            <option value="1500000">₹15 Lakhs</option>
-                            <option value="2000000">₹20 Lakhs</option>
-                            <option value="3000000">₹30 Lakhs</option>
-                            <option value="5000000">₹50 Lakhs</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="familySize">Family Size</label>
-                        <select id="familySize" name="familySize">
-                            <option value="">Select Family Size</option>
-                            <option value="1">Just Me (1)</option>
-                            <option value="2">Me + Spouse (2)</option>
-                            <option value="3">Me + Spouse + 1 Child (3)</option>
-                            <option value="4">Me + Spouse + 2 Children (4)</option>
-                            <option value="5">Me + Spouse + 3 Children (5)</option>
-                            <option value="6">Extended Family (6+)</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="medicalHistory">Medical History</label>
-                    <textarea id="medicalHistory" name="medicalHistory" rows="3" placeholder="Any pre-existing conditions or family medical history..."></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="specificRequirements">Specific Requirements</label>
-                    <textarea id="specificRequirements" name="specificRequirements" rows="3" placeholder="Any specific coverage requirements or preferences..."></textarea>
-                </div>
                 <button type="submit" class="submit-btn">
                     <span class="btn-text">Get My Health Insurance Quote</span>
                     <span class="loading" style="display: none;"></span>
@@ -552,11 +339,11 @@
               most to you.
             </p>
             <div class="footer-social">
-              <a href="https://www.facebook.com/people/SASpolicyvaluehubservices/61573253426040/" class="social-link" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="https://www.youtube.com/@sas_policyvaluehubservices" class="social-link" title="Youtube"><i class="fa-brands fa-youtube"></i></a>
-              <a href="#" class="social-link" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-              <a href="https://www.instagram.com/sas_policyvaluehubservices/?igsh=MXRzNG01anJieHkxYQ%3D%3D" class="social-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-              <a href="https://wa.me/919289122401" class="social-link" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="https://www.facebook.com/people/SASpolicyvaluehubservices/61573253426040/" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.youtube.com/@sas_policyvaluehubservices" class="social-link" title="Youtube"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.instagram.com/sas_policyvaluehubservices/?igsh=MXRzNG01anJieHkxYQ%3D%3D" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/919289122401" class="social-link" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             </div>
           </div>
           <div class="footer-section">
@@ -599,32 +386,6 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('planModal')">&times;</span>
             <div id="planModalContent"></div>
-        </div>
-    </div>
-
-    <div id="consultationModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('consultationModal')">&times;</span>
-            <h2>Free Health Insurance Consultation</h2>
-            <p>Our insurance experts will help you choose the perfect health insurance plan based on your specific needs and budget.</p>
-            <div class="consultation-benefits">
-                <h3>What You Get:</h3>
-                <ul>
-                    <li>✅ Personalized plan recommendations</li>
-                    <li>✅ Premium comparison across insurers</li>
-                    <li>✅ Coverage analysis and gap identification</li>
-                    <li>✅ Claims process guidance</li>
-                    <li>✅ Ongoing support and assistance</li>
-                </ul>
-            </div>
-            <div style="text-align: center; margin-top: 2rem;">
-                <button class="cta-button primary" onclick="closeModal('consultationModal'); scrollToSection('get-quote');">
-                    Schedule Consultation
-                </button>
-                <button class="cta-button secondary" onclick="window.location.href='tel:+919876543210';" style="margin-left: 1rem;">
-                    Call Now
-                </button>
-            </div>
         </div>
     </div>
 
