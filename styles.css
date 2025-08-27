@@ -714,7 +714,7 @@ nav {
     border: 1px solid rgba(255,255,255,0.2);
     border-radius: 8px;
     background: rgba(255,255,255,0.1);
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 1rem;
     transition: all 0.3s ease;
 }
@@ -825,7 +825,7 @@ nav {
 .contact-form .form-group input,
 .contact-form .form-group select,
 .contact-form .form-group textarea {
-    background: white;
+    background: rgb(255, 255, 255);
     color: #0c0c0c;
     border: 1px solid #d1d5db;
 }
