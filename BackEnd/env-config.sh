@@ -1,0 +1,31 @@
+# .env file - Environment Variables Configuration
+# IMPORTANT: Never commit this file to version control
+
+# MongoDB Configuration
+MONGODB_URI=mongodb://localhost:27017/sas_policy_hub
+# For MongoDB Atlas (cloud), use:
+# MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/sas_policy_hub?retryWrites=true&w=majority
+
+# Server Configuration
+PORT=5000
+NODE_ENV=production
+
+# Frontend URL (for CORS)
+FRONTEND_URL=http://localhost:3000
+
+# Email Configuration (Gmail)
+EMAIL_USER=your_gmail_account@gmail.com
+EMAIL_PASS=your_app_specific_password
+# Note: For Gmail, you need to generate an app-specific password:
+# 1. Go to Google Account settings
+# 2. Security > 2-Step Verification
+# 3. App passwords > Generate
+
+# Notification Email (where to send form submissions)
+NOTIFICATION_EMAIL=mannguptagx@gmail.com
+
+# JWT Secret (for future authentication)
+JWT_SECRET=your_very_secure_random_string_here
+
+# Session Secret
+SESSION_SECRET=another_secure_random_string_here
