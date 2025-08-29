@@ -22,7 +22,7 @@ EMAIL_PASS=your_app_specific_password
 # 3. App passwords > Generate
 
 # Notification Email (where to send form submissions)
-NOTIFICATION_EMAIL=mannguptagx@gmail.com
+NOTIFICATION_EMAIL=ramanuzkashyap4@gmail.com
 
 # JWT Secret (for future authentication)
 JWT_SECRET=your_very_secure_random_string_here
