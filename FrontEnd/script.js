@@ -1,3 +1,6 @@
+// API Configuration
+const API_BASE_URL = 'http://localhost:5000/api'; // Change this to your production URL
+
 // Mobile menu functionality
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
@@ -261,61 +264,54 @@ window.addEventListener('click', (e) => {
     });
 });
 
-// Quote form submission
-document.getElementById('quoteForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    
-    const submitBtn = this.querySelector('.submit-btn');
-    const btnText = submitBtn.querySelector('.btn-text');
-    const loading = submitBtn.querySelector('.loading');
-    const messageDiv = document.getElementById('quoteMessage');
-    
-    // Show loading state
-    btnText.style.display = 'none';
-    loading.style.display = 'inline-block';
-    submitBtn.disabled = true;
-    
-    // Collect form data
-    const formData = new FormData(this);
-    const data = Object.fromEntries(formData);
-    
-    // Simulate API call - replace with actual backend call
+// API Functions for backend integration
+async function submitContactMessage(data) {
     try {
-        const response = await submitQuoteRequest(data);
+        const response = await fetch(`${API_BASE_URL}/contact`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        });
         
-        if (response.success) {
-            // Show success message
-            messageDiv.innerHTML = `
-                <div class="message success">
-                    <strong>Success!</strong> Your quote request has been submitted. Our team will contact you within 24 hours with a personalized quote.
-                </div>
-            `;
-            
-            // Reset form
-            this.reset();
-        } else {
-            throw new Error(response.message || 'Failed to submit quote request');
+        const result = await response.json();
+        
+        if (!response.ok) {
+            throw new Error(result.message || 'Failed to send message');
         }
         
-        // Scroll to message
-        messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        
+        return result;
     } catch (error) {
-        // Show error message
-        messageDiv.innerHTML = `
-            <div class="message error">
-                <strong>Error!</strong> ${error.message || 'Something went wrong. Please try again or contact us directly.'}
-            </div>
-        `;
-    } finally {
-        // Reset button state
-        btnText.style.display = 'inline';
-        loading.style.display = 'none';
-        submitBtn.disabled = false;
+        console.error('Error submitting contact form:', error);
+        throw error;
     }
-});
+}
 
-// Contact form submission
+async function submitQuoteRequest(data) {
+    try {
+        const response = await fetch(`${API_BASE_URL}/quote`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        });
+        
+        const result = await response.json();
+        
+        if (!response.ok) {
+            throw new Error(result.message || 'Failed to submit quote request');
+        }
+        
+        return result;
+    } catch (error) {
+        console.error('Error submitting quote request:', error);
+        throw error;
+    }
+}
+
+// Updated Contact form submission handler
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     
@@ -330,25 +326,32 @@ document.getElementById('contactForm').addEventListener('submit', async function
     submitBtn.disabled = true;
     
     // Collect form data
-    const formData = new FormData(this);
-    const data = Object.fromEntries(formData);
+    const formData = {
+        name: document.getElementById('contactName').value,
+        email: document.getElementById('contactEmail').value,
+        phone: document.getElementById('contactPhone').value,
+        subject: document.getElementById('contactSubject').value,
+        message: document.getElementById('contactMessage').value
+    };
     
-    // Simulate API call - replace with actual backend call
     try {
-        const response = await submitContactMessage(data);
+        const response = await submitContactMessage(formData);
         
         if (response.success) {
             // Show success message
             messageDiv.innerHTML = `
                 <div class="message success">
-                    <strong>Message Sent!</strong> Thank you for contacting us. We'll get back to you within 24 hours.
+                    <strong>Message Sent!</strong> ${response.message}
                 </div>
             `;
             
             // Reset form
             this.reset();
-        } else {
-            throw new Error(response.message || 'Failed to send message');
+            
+            // Auto-hide success message after 5 seconds
+            setTimeout(() => {
+                messageDiv.innerHTML = '';
+            }, 5000);
         }
         
         // Scroll to message
@@ -361,6 +364,11 @@ document.getElementById('contactForm').addEventListener('submit', async function
                 <strong>Error!</strong> ${error.message || 'Failed to send message. Please try again or call us directly.'}
             </div>
         `;
+        
+        // Auto-hide error message after 10 seconds
+        setTimeout(() => {
+            messageDiv.innerHTML = '';
+        }, 10000);
     } finally {
         // Reset button state
         btnText.style.display = 'inline';
@@ -369,35 +377,89 @@ document.getElementById('contactForm').addEventListener('submit', async function
     }
 });
 
-// API Functions (to be replaced with actual backend calls)
-async function submitQuoteRequest(data) {
-    // Simulate API delay
-    await new Promise(resolve => setTimeout(resolve, 2000));
+// Updated Quote form submission handler
+document.getElementById('quoteForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
     
-    // This would be replaced with actual API call
-    // Example: const response = await fetch('/api/quote', { method: 'POST', body: JSON.stringify(data) });
+    const submitBtn = this.querySelector('.submit-btn');
+    const btnText = submitBtn.querySelector('.btn-text');
+    const loading = submitBtn.querySelector('.loading');
+    const messageDiv = document.getElementById('quoteMessage');
     
-    // Simulated response
-    return {
-        success: true,
-        message: 'Quote request submitted successfully',
-        quoteId: 'QT' + Date.now()
+    // Show loading state
+    btnText.style.display = 'none';
+    loading.style.display = 'inline-block';
+    submitBtn.disabled = true;
+    
+    // Collect form data
+    const formData = {
+        firstName: document.getElementById('firstName').value,
+        lastName: document.getElementById('lastName').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        insuranceType: document.getElementById('insuranceType').value,
+        age: document.getElementById('age').value,
+        requirements: document.getElementById('requirements').value
     };
-}
+    
+    try {
+        const response = await submitQuoteRequest(formData);
+        
+        if (response.success) {
+            // Show success message
+            messageDiv.innerHTML = `
+                <div class="message success">
+                    <strong>Success!</strong> ${response.message}
+                </div>
+            `;
+            
+            // Reset form
+            this.reset();
+            
+            // Auto-hide success message after 5 seconds
+            setTimeout(() => {
+                messageDiv.innerHTML = '';
+            }, 5000);
+        }
+        
+        // Scroll to message
+        messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        
+    } catch (error) {
+        // Show error message
+        messageDiv.innerHTML = `
+            <div class="message error">
+                <strong>Error!</strong> ${error.message || 'Something went wrong. Please try again or contact us directly.'}
+            </div>
+        `;
+        
+        // Auto-hide error message after 10 seconds
+        setTimeout(() => {
+            messageDiv.innerHTML = '';
+        }, 10000);
+    } finally {
+        // Reset button state
+        btnText.style.display = 'inline';
+        loading.style.display = 'none';
+        submitBtn.disabled = false;
+    }
+});
 
-async function submitContactMessage(data) {
-    // Simulate API delay
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    // This would be replaced with actual API call
-    // Example: const response = await fetch('/api/contact', { method: 'POST', body: JSON.stringify(data) });
-    
-    // Simulated response
-    return {
-        success: true,
-        message: 'Contact message sent successfully',
-        messageId: 'MSG' + Date.now()
-    };
+// Function to check API health
+async function checkAPIHealth() {
+    try {
+        const response = await fetch(`${API_BASE_URL}/health`);
+        const data = await response.json();
+        
+        if (data.success) {
+            console.log('API is running:', data);
+        } else {
+            console.warn('API health check failed');
+        }
+    } catch (error) {
+        console.error('API is not reachable:', error);
+        // You might want to show a notification to the user
+    }
 }
 
 // Form validation
@@ -548,8 +610,6 @@ document.addEventListener('DOMContentLoaded', function() {
     images.forEach(img => imageObserver.observe(img));
 });
 
-
-
 // Analytics and tracking (placeholder)
 function trackEvent(eventName, eventData = {}) {
     // Placeholder for analytics tracking
@@ -592,6 +652,9 @@ document.getElementById('contactForm').addEventListener('submit', function() {
 
 // Initialize everything when page loads
 window.addEventListener('load', function() {
+    // Check API health when page loads
+    checkAPIHealth();
+    
     // Remove loading states
     document.body.classList.add('loaded');
     
