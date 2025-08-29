@@ -565,10 +565,6 @@ nav {
     font-weight: 600;
 }
 
-.coverage-items {
-    space-y: 1.5rem;
-}
-
 .coverage-item {
     display: flex;
     align-items: flex-start;
