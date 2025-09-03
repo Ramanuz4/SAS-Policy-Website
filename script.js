@@ -126,7 +126,7 @@ if (aboutSection) {
     aboutObserver.observe(aboutSection);
 }
 
-// Modal functionality
+// Modal functionality with scroll support
 function openServiceModal(serviceType) {
     const modal = document.getElementById('serviceModal');
     const content = document.getElementById('serviceModalContent');
@@ -237,8 +237,33 @@ function openServiceModal(serviceType) {
                 <button class="cta-button secondary" onclick="closeModal('serviceModal'); scrollToSection('contact');" style="margin-left: 1rem;">Contact Us</button>
             </div>
         `;
+        
+        // Show modal
         modal.style.display = 'block';
         document.body.style.overflow = 'hidden';
+        
+        // Ensure modal content is scrollable and positioned correctly
+        const modalContent = modal.querySelector('.modal-content');
+        
+        // Set modal content styles for proper scrolling
+        modalContent.style.maxHeight = '90vh';
+        modalContent.style.overflow = 'auto';
+        modalContent.style.margin = '2% auto';
+        modalContent.style.position = 'relative';
+        
+        // Scroll to top of modal content
+        setTimeout(() => {
+            modalContent.scrollTop = 0;
+            
+            // Also scroll the page to ensure modal is in viewport
+            const modalRect = modal.getBoundingClientRect();
+            if (modalRect.top < 0 || modalRect.bottom > window.innerHeight) {
+                window.scrollTo({
+                    top: window.pageYOffset + modalRect.top - 50,
+                    behavior: 'smooth'
+                });
+            }
+        }, 100);
     }
 }
 
@@ -686,3 +711,28 @@ window.addEventListener('offline', function() {
     console.log('Connection lost');
     // You could show an offline message
 });
+
+// Setup scroll animations
+function setupScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                
+                // Trigger counter animation for stats
+                if (entry.target.classList.contains('stats-row')) {
+                    animateCounters();
+                }
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+    });
+}
