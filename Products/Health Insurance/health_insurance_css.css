@@ -880,18 +880,18 @@ footer {
     }
 }
 
-.social-link :hover {
+.social-link:hover {
     color: #3b82f6;
     transform: scale(1.1);
 
     i{
         transform: scale(1.3);
         transition: all 0.2s ease;
-
     }
 
     .fa-facebook-f { color: #0866ff; }
     .fa-youtube { color: #ff0033; }
+    .fa-linkedin-in { color: #0073b2; }
     .fa-instagram { color: #f912a4; }
     .fa-whatsapp { color: #25d366; }
 }
