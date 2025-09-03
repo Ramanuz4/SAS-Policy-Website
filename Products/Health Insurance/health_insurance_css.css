@@ -847,7 +847,7 @@ footer {
     display: block;
 }
 
-.footer-section a:hover {
+.footer-section .translate:hover {
     color: #3b82f6;
     transform: translateX(3px);
     transition: all 0.3s ease;
@@ -873,12 +873,27 @@ footer {
     justify-content: center;
     text-decoration: none;
     transition: all 0.3s ease;
-    color: #7c91ac;
+
+    i{
+        font-size: 1.3rem;
+        color: #7c91ac;
+    }
 }
 
-.social-link:hover {
+.social-link :hover {
     color: #3b82f6;
     transform: scale(1.1);
+
+    i{
+        transform: scale(1.3);
+        transition: all 0.2s ease;
+
+    }
+
+    .fa-facebook-f { color: #0866ff; }
+    .fa-youtube { color: #ff0033; }
+    .fa-instagram { color: #f912a4; }
+    .fa-whatsapp { color: #25d366; }
 }
 
 .footer-bottom {

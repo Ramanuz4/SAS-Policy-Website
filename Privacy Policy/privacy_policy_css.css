@@ -320,7 +320,6 @@ nav {
 }
 
 .policy-section li::before {
-    content: '•';
     position: absolute;
     left: 0;
     color: #3b82f6;
