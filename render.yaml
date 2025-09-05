@@ -1,0 +1,53 @@
+# Render Blueprint Configuration
+# This file defines both services for your SAS Policy Value Hub
+
+services:
+  # Backend API Service
+  - type: web
+    name: sas-policy-backend
+    env: node
+    rootDir: ./BackEnd
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        fromDatabase:
+          name: mongodb-atlas
+          property: connectionString
+      - key: FRONTEND_URL
+        fromService:
+          type: web
+          name: sas-policy-frontend
+          property: url
+      - key: EMAIL_USER
+        sync: false  # Set manually in Render dashboard
+      - key: EMAIL_PASS
+        sync: false  # Set manually in Render dashboard
+      - key: NOTIFICATION_EMAIL
+        sync: false  # Set manually in Render dashboard
+      - key: JWT_SECRET
+        generateValue: true
+      - key: SESSION_SECRET
+        generateValue: true
+
+  # Frontend Static Site
+  - type: web
+    name: sas-policy-frontend
+    env: static
+    buildCommand: echo "No build required for static site"
+    staticPublishPath: .
+    plan: free
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=86400
+    routes:
+      - type: rewrite
+        source: /api/*
+        destination: https://sas-policy-backend.onrender.com/api/*
+
+# Database (External - MongoDB Atlas already configured)
+# No database section needed since using MongoDB Atlas

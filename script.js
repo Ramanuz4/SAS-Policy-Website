@@ -1,5 +1,7 @@
 // API Configuration
-const API_BASE_URL = 'http://localhost:5000/api'; // Change this to your production URL
+const API_BASE_URL = window.location.hostname === 'localhost' 
+    ? 'http://localhost:5000/api'  // Development
+    : '/api';  // Production (proxied through Render static site)
 
 // Mobile menu functionality
 const menuToggle = document.getElementById('menuToggle');
